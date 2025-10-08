@@ -1,0 +1,78 @@
+/* ======== PÁGINA GLOSARIO ======== */
+.glosario {
+    background-color: #555555; /* Fondo gris oscuro como en la imagen */
+    min-height: 100vh; /* Para que ocupe toda la altura de la pantalla */
+    padding: 60px 20px;
+}
+
+.glosario .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.glosario h2 {
+    font-family: 'Anton', sans-serif; /* Usamos la misma fuente para consistencia */
+    font-size: 2.5rem;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* Reutilizamos la clase .accordion-item para la estructura */
+.glosario .accordion-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    /* Añadimos un borde oscuro para dar el efecto de la imagen */
+    border: 2px solid #1c1c1c; 
+}
+
+.glosario .accordion-header {
+    background-color: #D50000; /* Rojo principal */
+    color: #000000; /* Texto del término en negro */
+    font-weight: bold;
+    cursor: pointer;
+    padding: 18px 25px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.4s ease;
+    border-radius: 6px; /* El borde exterior ya tiene, este es para el botón */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* El contenido desplegado tendrá el mismo fondo rojo */
+.glosario .accordion-content {
+    padding: 0 25px;
+    background-color: #D50000; /* Mismo rojo que el encabezado */
+    color: #ffffff; /* Texto de la definición en blanco */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.glosario .accordion-content p {
+    padding: 15px 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Estilo para la flecha, ahora en negro */
+.glosario .arrow-icon {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(45deg); /* Flecha apuntando hacia abajo */
+    transition: transform 0.3s ease;
+}
+
+/* Flecha girada cuando está activo */
+.glosario .accordion-header.active .arrow-icon {
+    transform: rotate(-135deg);
+}

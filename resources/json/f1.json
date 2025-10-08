@@ -1,0 +1,155 @@
+{
+    "pilotos": [
+        {
+            "id": "hamilton",
+            "name": "Lewis Hamilton",
+            "country": "Reino Unido",
+            "team": "Ferrari",
+            "number": 44,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LEWHAM00/lewham00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 7,
+                "wins": 103,
+                "podiums": 197,
+                "firstEntry": "2007 Bahrain GP"
+            }
+        },
+        {
+            "id": "leclerc",
+            "name": "Charles Leclerc",
+            "country": "Mónaco",
+            "team": "Ferrari",
+            "number": 16,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/C/CHALEC00/chalec00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 5,
+                "podiums": 30,
+                "firstEntry": "2018 Australian GP"
+            }
+        },
+        {
+            "id": "norris",
+            "name": "Lando Norris",
+            "country": "Reino Unido",
+            "team": "McLaren",
+            "number": 4,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LANNOR01/lannor01.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 1,
+                "podiums": 16,
+                "firstEntry": "2019 Australian GP"
+            }
+        },
+        {
+            "id": "piastri",
+            "name": "Oscar Piastri",
+            "country": "Australia",
+            "team": "McLaren",
+            "number": 81,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/O/OSCPIA01/oscpia01.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 0,
+                "podiums": 3,
+                "firstEntry": "2023 Bahrain GP"
+            }
+        },
+        {
+            "id": "max",
+            "name": "Max Verstappen",
+            "country": "Países Bajos",
+            "team": "Red Bull Racing",
+            "number": 1,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/M/MAXVER01/maxver01.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 3,
+                "wins": 60,
+                "podiums": 104,
+                "firstEntry": "2015 Australian GP"
+            }
+        },
+        {
+            "id": "perez",
+            "name": "Sergio Pérez",
+            "country": "México",
+            "team": "Red Bull Racing",
+            "number": 11,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/S/SERPER01/serper01.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 6,
+                "podiums": 39,
+                "firstEntry": "2011 Australian GP"
+            }
+        }
+    ],
+    "escuderias": [
+        {
+            "id": "ferrari",
+            "name": "Scuderia Ferrari",
+            "country": "Italia",
+            "teamPrincipal": "Frédéric Vasseur",
+            "image": "https://media.formula1.com/content/dam/fom-website/teams/Ferrari/ferrari-logo.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 16,
+                "wins": 244,
+                "poles": 249,
+                "firstEntry": "1950 Monaco GP"
+            }
+        },
+        {
+            "id": "mclaren",
+            "name": "McLaren Formula 1 Team",
+            "country": "Reino Unido",
+            "teamPrincipal": "Andrea Stella",
+            "image": "https://media.formula1.com/content/dam/fom-website/teams/McLaren/mclaren-logo.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 8,
+                "wins": 183,
+                "poles": 156,
+                "firstEntry": "1966 Monaco GP"
+            }
+        },
+        {
+            "id": "redbull",
+            "name": "Red Bull Racing",
+            "country": "Austria",
+            "teamPrincipal": "Christian Horner",
+            "image": "https://media.formula1.com/content/dam/fom-website/teams/Red%20Bull/red-bull-logo.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 6,
+                "wins": 120,
+                "poles": 103,
+                "firstEntry": "2005 Australian GP"
+            }
+        },
+        {
+            "id": "mercedes",
+            "name": "Mercedes-AMG Petronas F1 Team",
+            "country": "Alemania",
+            "teamPrincipal": "Toto Wolff",
+            "image": "https://media.formula1.com/content/dam/fom-website/teams/Mercedes/mercedes-logo.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 8,
+                "wins": 125,
+                "poles": 115,
+                "firstEntry": "1954 French GP"
+            }
+        },
+        {
+            "id": "astonmartin",
+            "name": "Aston Martin Aramco F1 Team",
+            "country": "Reino Unido",
+            "teamPrincipal": "Mike Krack",
+            "image": "https://media.formula1.com/content/dam/fom-website/teams/Aston%20Martin/aston-martin-logo.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 0,
+                "poles": 0,
+                "firstEntry": "2021 Bahrain GP"
+            }
+        }
+    ]
+}

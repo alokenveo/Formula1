@@ -1,0 +1,46 @@
+[
+    {
+        "termino": "DRS (Drag Reduction System)",
+        "definicion": "Un sistema que permite al piloto abrir un alerón trasero móvil para reducir la resistencia al aire y aumentar la velocidad en zonas específicas del circuito. Solo se puede usar bajo ciertas condiciones de carrera, como estar a menos de un segundo del coche de delante."
+    },
+    {
+        "termino": "Pole Position",
+        "definicion": "Posición de salida en la primera plaza de la parrilla, conseguida por el piloto que marca el mejor tiempo durante la sesión de clasificación. Es muy importante porque ofrece ventaja estratégica al inicio de la carrera."
+    },
+    {
+        "termino": "Undercut",
+        "definicion": "Estrategia de carrera que consiste en entrar a boxes antes que el rival para cambiar neumáticos y aprovechar la ventaja de vuelta rápida con neumáticos nuevos, buscando superar al adversario cuando éste entre a boxes más tarde."
+    },
+    {
+        "termino": "Safety Car",
+        "definicion": "Vehículo de seguridad que entra en pista para controlar la velocidad de los coches en situaciones de accidente, lluvia intensa o condiciones peligrosas, asegurando que se mantenga la seguridad de los pilotos y del personal de pista."
+    },
+    {
+        "termino": "Pit Stop",
+        "definicion": "Parada en boxes durante la carrera para cambiar neumáticos, repostar combustible (en épocas pasadas) o realizar ajustes en el coche. La rapidez en el pit stop puede marcar la diferencia en la estrategia de carrera."
+    },
+    {
+        "termino": "Paddock",
+        "definicion": "Área restringida detrás de los boxes donde los equipos guardan su equipamiento y tienen sus motorhomes. Es el centro neurálgico del circuito durante un fin de semana de Gran Premio."
+    },
+    {
+        "termino": "Box",
+        "definicion": "Área en el paddock destinada al equipo de un piloto donde se realizan los pit stops y se guardan herramientas, repuestos y neumáticos."
+    },
+    {
+        "termino": "Chicane",
+        "definicion": "Curva compuesta por dos o más giros en direcciones opuestas en un circuito, diseñada para reducir la velocidad de los coches en un tramo concreto."
+    },
+    {
+        "termino": "Apex",
+        "definicion": "El punto más interno de una curva, por donde idealmente debe pasar el coche para optimizar la velocidad y la trazada."
+    },
+    {
+        "termino": "Parrilla de salida",
+        "definicion": "Orden en el que los coches se colocan en la línea de salida antes de que comience la carrera, determinada por los resultados de la clasificación."
+    },
+    {
+        "termino": "Virtual Safety Car (VSC)",
+        "definicion": "Sistema similar al Safety Car, pero sin que un vehículo físico salga a pista. Todos los pilotos deben reducir la velocidad y mantener una distancia segura mientras se gestiona un incidente, permitiendo que la carrera se controle sin neutralizar completamente la competición."
+    }
+]

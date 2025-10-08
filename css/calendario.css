@@ -1,0 +1,156 @@
+/* ======== PÁGINA CALENDARIO ======== */
+main {
+    background-color: #555555;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.calendar-container {
+    max-width: 1100px;
+    margin: auto;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.nav-arrow {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.month-year-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#month-name {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#year-select {
+    background-color: #444;
+    color: white;
+    border: 1px solid #666;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #666;
+    font-weight: bold;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.day {
+    background-color: #444;
+    min-height: 120px;
+    padding: 8px;
+    border-radius: 5px;
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.day.other-month {
+    background-color: #3a3a3a;
+    color: #777;
+}
+
+.day-number {
+    font-weight: bold;
+}
+
+/* Estilo para los días con carrera */
+.race-day {
+    background-color: #E10600; /* Rojo F1 */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.race-day:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.gp-info {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ======== ESTILOS DEL MODAL (VENTANA EMERGENTE) ======== */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7); /* Fondo oscuro semitransparente */
+}
+
+.modal-content {
+    background-color: #2d2d2d;
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: white;
+}
+
+#modal-circuit-image {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    border-radius: 8px;
+}

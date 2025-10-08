@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario | Formula 1 2025</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/calendario.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap"
@@ -33,6 +34,7 @@
                         <li><a href="/html/miembros.html">Pilotos y escuderías</a></li>
                         <li><a href="/html/calendario.html">Calendario</a></li>
                         <li><a href="/html/glosario.html">Glosario</a></li>
+                        <li><a href="/html/galeria.html">Galería de Imágenes</a></li>
                         <li><a href="/html/tienda.html">Tienda</a></li>
                         <li><a href="/html/carreras.html">Carreras</a></li>
                     </ul>
@@ -42,7 +44,39 @@
         </nav>
     </header>
 
-    <main></main>
+    <main>
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prev-month" class="nav-arrow">←</button>
+                <div class="month-year-selector">
+                    <h2 id="month-name"></h2>
+                    <select id="year-select"></select>
+                </div>
+                <button id="next-month" class="nav-arrow">→</button>
+            </div>
+            <div class="weekdays">
+                <div>LUNES</div>
+                <div>MARTES</div>
+                <div>MIÉRCOLES</div>
+                <div>JUEVES</div>
+                <div>VIERNES</div>
+                <div>SÁBADO</div>
+                <div>DOMINGO</div>
+            </div>
+            <div id="calendar-days" class="calendar-days">
+            </div>
+        </div>
+
+        <div id="gp-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="modal-gp-name"></h2>
+                <p id="modal-circuit-name"></p>
+                <p id="modal-location"></p>
+                <img id="modal-circuit-image" src="" alt="Mapa del circuito">
+            </div>
+        </div>
+    </main>
 
     <footer class="footer">
         <div class="container footer-grid">
@@ -81,6 +115,7 @@
         </div>
     </footer>
 
+    
+    <script src="/js/calendario.js"></script>
 </body>
-
 </html>

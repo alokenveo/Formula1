@@ -1,0 +1,84 @@
+/* ======== PÁGINA GALERÍA DE IMÁGENES ======== */
+.gallery-section {
+    background-color: #555555; /* Mismo fondo gris que en las otras páginas */
+    padding: 40px 20px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.gallery-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-section h2 {
+    font-family: 'Anton', sans-serif; /* O la fuente que uses para títulos */
+    font-size: 2.5rem;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* El layout de mosaico/masonry */
+.masonry-layout {
+    column-count: 3; /* Número de columnas en escritorio */
+    column-gap: 15px; /* Espacio entre columnas */
+}
+
+/* Estilo para cada elemento de la galería */
+.gallery-item {
+    margin-bottom: 15px; /* Espacio vertical entre imágenes */
+    display: inline-block; /* Necesario para que el layout de columnas funcione */
+    width: 100%;
+    overflow: hidden; /* Para que el texto no se salga */
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina espacio extra debajo de la imagen */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Efecto de zoom sutil al pasar el ratón */
+}
+
+/* Estilo para el pie de foto (caption) */
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px 10px 10px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1; /* Aparece al pasar el ratón */
+}
+
+
+/* --- Media Queries para hacerlo Responsive --- */
+/* Para tablets */
+@media (max-width: 768px) {
+    .masonry-layout {
+        column-count: 2; /* 2 columnas */
+    }
+}
+
+/* Para móviles */
+@media (max-width: 480px) {
+    .masonry-layout {
+        column-count: 1; /* 1 columna */
+    }
+}

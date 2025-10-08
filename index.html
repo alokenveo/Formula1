@@ -33,10 +33,28 @@
                         <li><a href="html/miembros.html">Pilotos y escuderías</a></li>
                         <li><a href="html/calendario.html">Calendario</a></li>
                         <li><a href="html/glosario.html">Glosario</a></li>
+                        <li><a href="/html/galeria.html">Galería de Imágenes</a></li>
                         <li><a href="html/tienda.html">Tienda</a></li>
                         <li><a href="html/carreras.html">Carreras</a></li>
                     </ul>
-                    <a href="#" class="signin-btn">Sign In</a>
+                    <div class="user-profile">
+                        <button class="user-btn" aria-label="Perfil de usuario">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" width="20"
+                                height="20">
+                                <path
+                                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#" id="show-login-modal">Iniciar Sesión</a>
+
+                            <div id="user-logged-in-options" style="display: none;">
+                                <a href="#">Mi Información</a>
+                                <a href="#">Mis Compras</a>
+                                <a href="#" id="logout-btn">Cerrar Sesión</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -81,14 +99,74 @@
         <section class="normativas">
             <div class="container">
                 <h2>NORMATIVAS</h2>
-                <ul>
-                    <li><a href="#">REGLAMENTO 1</a></li>
-                    <li><a href="#">REGLAMENTO 2</a></li>
-                    <li><a href="#">REGLAMENTO 3</a></li>
-                    <li><a href="#">REGLAMENTO 4</a></li>
-                    <li><a href="#">REGLAMENTO 5</a></li>
-                    <li><a href="#">REGLAMENTO 6</a></li>
-                </ul>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Normativa de carrera
+                            <span class="arrow-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                Cada carrera debe completarse según las reglas de la FIA, respetando banderas, boxes y
+                                límites de pista.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Reglamento técnico
+                            <span class="arrow-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                Todos los coches deben cumplir estrictamente con las especificaciones técnicas del año
+                                en curso.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Sistema de puntuación
+                            <span class="arrow-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                Los pilotos reciben puntos según su posición final, y el campeón se decide sumando los
+                                puntos de toda la temporada.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Uso de neumáticos
+                            <span class="arrow-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                Cada piloto debe utilizar obligatoriamente los diferentes compuestos de neumáticos
+                                durante la carrera según la estrategia marcada por la FIA.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Seguridad
+                            <span class="arrow-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                Los pilotos deben usar casco, ropa ignífuga y sistemas de seguridad como el HANS y el
+                                halo para garantizar su protección.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
     </main>
@@ -130,6 +208,73 @@
         </div>
     </footer>
 
+
+    <!-- Modal de inicio de sesión -->
+    <div id="login-modal" class="auth-modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Entrar</button>
+            </form>
+            <p class="switch-modal-text">¿No tienes cuenta? <a href="#" id="show-register-modal">Regístrate aquí</a>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal de registro de usuario -->
+    <div id="register-modal" class="auth-modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Crear Cuenta</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Nombre completo</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Contraseña</label>
+                    <input type="password" id="register-password" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="register-password-confirm">Confirmar Contraseña</label>
+                    <input type="password" id="register-password-confirm" required>
+                </div>
+                <button type="submit" class="submit-btn">Registrarse</button>
+            </form>
+            <p class="switch-modal-text">¿Ya tienes cuenta? <a href="#" id="switch-to-login-modal">Inicia sesión</a>.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener("click", event => {
+                header.classList.toggle("active")
+                const accordionContent = header.nextElementSibling;
+                if (accordionContent.style.maxHeight) {
+                    accordionContent.style.maxHeight = null;
+                } else {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+    <script src="/js/usuario.js"></script>
 </body>
 
 </html>

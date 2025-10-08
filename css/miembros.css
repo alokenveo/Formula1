@@ -1,0 +1,211 @@
+/* ======== SECCIÓN PILOTOS Y ESCUDERÍAS ======== */
+.drivers-teams-section {
+    background-color: #555555; /* Fondo gris oscuro */
+    padding: 40px 20px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.switch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 15px;
+}
+
+.switch-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+/* El SWITCH (toggle) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E10600; /* Rojo F1 cuando no está activo */
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #E10600; /* Rojo F1 cuando está activo */
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #E10600;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ======== GRID DE TARJETAS ======== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ======== ESTILOS DE LA TARJETA (FLIP CARD) ======== */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 280px; /* Altura fija para las tarjetas */
+    perspective: 1000px; /* Para el efecto 3D del volteo */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s; /* Animación de volteo */
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Gira la tarjeta cuando el ratón está encima */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Oculta la parte trasera por defecto */
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.flip-card-front {
+    background-color: #333; /* Gris oscuro para el frente */
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #E10600; /* Rojo F1 para la parte trasera */
+    color: white;
+    transform: rotateY(180deg); /* La parte trasera ya está girada */
+    justify-content: flex-start; /* Alinear contenido arriba en la parte trasera */
+    text-align: left;
+    padding-top: 25px;
+}
+
+/* Contenido del frente */
+.card-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain; /* Para que la imagen se ajuste bien */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-color: #777; /* Placeholder si no hay imagen */
+    display: block;
+}
+.card-image.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #bbb;
+    border: 2px dashed #999;
+}
+.card-image.placeholder::after {
+    content: '🖼️';
+}
+
+.card-country {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+.card-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.card-team {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+/* Contenido de la parte trasera */
+.card-back-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: black; /* Título en negro */
+    text-align: center;
+    width: 100%;
+}
+.card-back-info p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px; /* Para que no se pegue a los lados */
+}
+.card-back-info span:first-child {
+    font-weight: bold;
+    color: black; /* Etiquetas en negro */
+}
+.card-back-info span:last-child {
+    color: white; /* Valores en blanco */
+}

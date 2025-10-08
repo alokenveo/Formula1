@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pilotos y escuderías | Formula 1 2025</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/miembros.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap"
@@ -33,6 +34,7 @@
                         <li><a href="/html/miembros.html">Pilotos y escuderías</a></li>
                         <li><a href="/html/calendario.html">Calendario</a></li>
                         <li><a href="/html/glosario.html">Glosario</a></li>
+                        <li><a href="/html/galeria.html">Galería de Imágenes</a></li>
                         <li><a href="/html/tienda.html">Tienda</a></li>
                         <li><a href="/html/carreras.html">Carreras</a></li>
                     </ul>
@@ -42,7 +44,21 @@
         </nav>
     </header>
 
-    <main></main>
+    <main>
+        <section class="drivers-teams-section">
+            <div class="switch-container">
+                <span class="switch-label">Pilotos</span>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-view">
+                    <span class="slider round"></span>
+                </label>
+                <span class="switch-label">Escuderías</span>
+            </div>
+
+            <div id="cards-container" class="cards-grid">
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container footer-grid">
@@ -81,6 +97,7 @@
         </div>
     </footer>
 
+    <script src="/js/miembros.js"></script>
 </body>
 
 </html>

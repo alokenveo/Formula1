@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda | Formula 1 2025</title>
+    <title>Galería de Imágenes | Formula 1 2025</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/galeria.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap"
@@ -43,7 +44,17 @@
         </nav>
     </header>
 
-    <main></main>
+    <main>
+        <section class="gallery-section">
+            <div class="container">
+                <h2>GALERÍA DE IMÁGENES</h2>
+
+                <div id="gallery-grid" class="masonry-layout">
+
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container footer-grid">
@@ -82,6 +93,30 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const galleryGrid = document.getElementById('gallery-grid');
+
+            // Cargar las imágenes desde el archivo JSON
+            fetch('/resources/json/galeria.json')
+                .then(response => response.json())
+                .then(images => {
+                    // Iterar sobre cada imagen y crear su elemento HTML
+                    images.forEach(image => {
+                        const galleryItem = document.createElement('div');
+                        galleryItem.classList.add('gallery-item');
+
+                        galleryItem.innerHTML = `
+                    <img src="${image.src}" alt="${image.alt}">
+                    <div class="gallery-caption">${image.caption}</div>
+                `;
+
+                        galleryGrid.appendChild(galleryItem);
+                    });
+                })
+                .catch(error => console.error('Error al cargar la galería:', error));
+        });
+    </script>
 </body>
 
 </html>

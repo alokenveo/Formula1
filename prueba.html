@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador de Noticias F1</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #results { margin-top: 20px; }
+        .news-item { border-bottom: 1px solid #ccc; padding: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Buscador de Noticias F1</h1>
+    <input type="text" id="search" placeholder="Buscar noticia..." onkeyup="searchNews()">
+    
+    <div id="results"></div>
+
+    <script>
+        const news = [
+            { title: "Hamilton gana el Gran Premio de España", content: "Gran actuación de Lewis Hamilton en Barcelona..." },
+            { title: "Verstappen lidera el campeonato", content: "Max Verstappen demuestra su superioridad esta temporada..." },
+            { title: "F1 anuncia cambios en reglamento 2026", content: "Nuevas normas técnicas y de puntuación para la próxima temporada..." },
+            { title: "Mercedes presenta su coche 2026", content: "El nuevo W17 promete innovación en aerodinámica y motor..." }
+        ];
+
+        function searchNews() {
+            const query = document.getElementById('search').value.toLowerCase();
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            const filtered = news.filter(item => item.title.toLowerCase().includes(query) || item.content.toLowerCase().includes(query));
+
+            if (filtered.length === 0) {
+                resultsDiv.innerHTML = "<p>No se encontraron noticias.</p>";
+                return;
+            }
+
+            filtered.forEach(item => {
+                const div = document.createElement('div');
+                div.classList.add('news-item');
+                div.innerHTML = `<h3>${item.title}</h3><p>${item.content}</p>`;
+                resultsDiv.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>

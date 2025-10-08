@@ -1,0 +1,37 @@
+[
+    {
+        "date": "2025-03-16",
+        "gpName": "Gran Premio de Australia",
+        "circuitName": "Circuito de Albert Park",
+        "location": "Melbourne, Australia",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Australia_Circuit.png"
+    },
+    {
+        "date": "2025-03-23",
+        "gpName": "Gran Premio de China",
+        "circuitName": "Circuito Internacional de Shanghái",
+        "location": "Shanghái, China",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/China_Circuit.png"
+    },
+    {
+        "date": "2025-04-06",
+        "gpName": "Gran Premio de Japón",
+        "circuitName": "Circuito de Suzuka",
+        "location": "Suzuka, Japón",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Japan_Circuit.png"
+    },
+    {
+        "date": "2025-04-13",
+        "gpName": "Gran Premio de Bahréin",
+        "circuitName": "Circuito Internacional de Bahréin",
+        "location": "Sakhir, Bahréin",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Bahrain_Circuit.png"
+    },
+    {
+        "date": "2025-04-20",
+        "gpName": "Gran Premio de Arabia Saudí",
+        "circuitName": "Circuito de la Corniche de Yeda",
+        "location": "Yeda, Arabia Saudí",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Saudi_Arabia_Circuit.png"
+    }
+]

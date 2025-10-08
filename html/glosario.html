@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glosario | Formula 1 2025</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/glosario.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap"
@@ -33,6 +34,7 @@
                         <li><a href="/html/miembros.html">Pilotos y escuderías</a></li>
                         <li><a href="/html/calendario.html">Calendario</a></li>
                         <li><a href="/html/glosario.html">Glosario</a></li>
+                        <li><a href="/html/galeria.html">Galería de Imágenes</a></li>
                         <li><a href="/html/tienda.html">Tienda</a></li>
                         <li><a href="/html/carreras.html">Carreras</a></li>
                     </ul>
@@ -42,7 +44,17 @@
         </nav>
     </header>
 
-    <main></main>
+    <main>
+        <section class="glosario">
+            <div class="container">
+                <h2>GLOSARIO</h2>
+
+                <div class="accordion">
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container footer-grid">
@@ -81,6 +93,55 @@
         </div>
     </footer>
 
+    <script>
+        // Se ejecuta cuando todo el contenido de la página se ha cargado
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const accordionContainer = document.querySelector(".glosario .accordion");
+
+            // 1. Cargar los datos desde el archivo JSON
+            fetch('/resources/json/glosario.json')
+                .then(response => response.json()) // Convierte la respuesta a formato JSON
+                .then(data => {
+                    // 2. Crear el HTML para cada término del glosario
+                    data.forEach(item => {
+                        // Crea un div para el elemento del acordeón
+                        const accordionItem = document.createElement('div');
+                        accordionItem.classList.add('accordion-item');
+
+                        // Usamos plantillas literales (`) para crear el HTML de forma más limpia
+                        accordionItem.innerHTML = `
+                        <button class="accordion-header">
+                            ${item.termino}
+                            <span class="arrow-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>${item.definicion}</p>
+                        </div>
+                    `;
+
+                        // Añade el elemento creado al contenedor principal
+                        accordionContainer.appendChild(accordionItem);
+                    });
+
+                    // 3. UNA VEZ CREADO EL HTML, añadimos la funcionalidad del clic
+                    //    Esto es clave: se debe hacer después de que los elementos existan
+                    const accordionHeaders = document.querySelectorAll(".accordion-header");
+                    accordionHeaders.forEach(header => {
+                        header.addEventListener("click", () => {
+                            header.classList.toggle("active");
+                            const accordionContent = header.nextElementSibling;
+                            if (accordionContent.style.maxHeight) {
+                                accordionContent.style.maxHeight = null;
+                            } else {
+                                accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+                            }
+                        });
+                    });
+                })
+                .catch(error => console.error('Error al cargar el glosario:', error)); // Muestra un error si no se encuentra el archivo
+        });
+    </script>
 </body>
 
 </html>
