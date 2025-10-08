@@ -1,0 +1,329 @@
+/* ======== CONFIGURACIÓN GENERAL ======== */
+:root {
+    --color-rojo-f1: #E10600;
+    --color-negro-f1: #15151e;
+    --color-gris-texto: #cccccc;
+    --color-blanco: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-negro-f1);
+    color: var(--color-blanco);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 0;
+}
+
+/* --- ESTILOS DEL HEADER --- */
+
+/* Contenedor principal del header */
+.header {
+    width: 100%;
+}
+
+/* --- PARTE SUPERIOR (Logo) --- */
+.header-top {
+    background-color: #38383F; /* Gris oscuro */
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center;
+    padding: 20px 0;
+}
+
+.f1-logo {
+    width: 130px; /* Tamaño del logo */
+    height: auto;
+}
+
+/* --- PARTE INFERIOR (Barra de Navegación) --- */
+.header-bottom {
+    background-color: #E10600; /* Rojo oficial de F1 */
+    padding: 10px 0;
+}
+
+.nav-container {
+    max-width: 1400px; /* Ancho máximo del contenido de la barra */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 20px; /* Espaciado en los lados */
+    display: flex;
+    justify-content: space-between; /* Pone un grupo a la izq. y otro a la der. */
+    align-items: center;
+}
+
+/* Lado izquierdo de la barra (botón buscador) */
+.nav-left .search-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px; /* Tamaño del icono */
+    cursor: pointer;
+}
+
+/* Lado derecho de la barra (enlaces y botón Sign In) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espacio entre la lista de enlaces y el botón "Sign In" */
+}
+
+.nav-links {
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Pone los elementos de la lista en horizontal */
+    gap: 20px; /* Espacio entre cada enlace */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* Borde inferior para el efecto hover */
+    transition: border-color 0.3s;
+}
+
+.nav-links a:hover {
+    border-bottom-color: white; /* Muestra el borde al pasar el ratón */
+}
+
+/* Botón de "Sign In" */
+.signin-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signin-btn:hover {
+    background-color: #f0f0f0; /* Un gris muy claro al pasar el ratón */
+}
+
+
+/* ======== CABECERA (HERO SECTION) ======== */
+.hero {
+    height: 70vh;
+    background-image: url('https://i.imgur.com/K3v8IvG.png'); /* He subido tu imagen a un servidor para usarla */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start; /* Alinea el texto arriba */
+    padding-top: 40px; /* Espacio superior para el título */
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    color: var(--color-blanco);
+    text-align: left;
+    margin-left: 5%; /* Margen para que no esté pegado al borde */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* ======== SECCIÓN HISTORIA ======== */
+.historia {
+    background-color: var(--color-rojo-f1);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.historia-img-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #f0f0f0;
+    border: 2px dashed #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: #ccc;
+}
+.historia-img-placeholder::after {
+    content: '🖼️'; /* Emoji de imagen como placeholder */
+}
+
+
+.historia-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.historia-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ======== SECCIÓN NOSOTROS ======== */
+.nosotros {
+    background-color: var(--color-negro-f1);
+    text-align: center;
+}
+
+.logo-placeholder {
+    font-size: 2.5rem;
+    color: var(--color-rojo-f1);
+    margin-bottom: 10px;
+}
+
+.nosotros h2 {
+    font-size: 2.5rem;
+}
+
+.nosotros p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: var(--color-gris-texto);
+}
+
+/* ======== SECCIÓN NORMATIVAS ======== */
+.normativas {
+    background-color: var(--color-rojo-f1);
+}
+
+.normativas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.normativas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.normativas ul li {
+    margin-bottom: 15px;
+}
+
+.normativas ul li a {
+    display: block;
+    background-color: transparent;
+    border: 2px solid var(--color-blanco);
+    padding: 15px;
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.normativas ul li a:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-rojo-f1);
+}
+
+
+/* ======== FOOTER ======== */
+.footer {
+    background-color: var(--color-negro-f1);
+    border-top: 1px solid #333;
+    padding: 50px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr 1.5fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.footer h3 {
+    font-size: 1.2rem;
+    color: var(--color-blanco);
+    margin-bottom: 20px;
+}
+
+/* Footer: Branding y Redes */
+.f1-logo-footer {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Anton', sans-serif;
+    margin: 0 0 15px 0;
+}
+
+.social-icons a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Footer: Formulario */
+.footer-contact form input,
+.footer-contact form textarea {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: var(--color-blanco);
+    border-radius: 4px;
+}
+
+.footer-contact form button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-rojo-f1);
+    color: var(--color-blanco);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.footer-contact form button:hover {
+    background-color: #ff3333;
+}
+
+/* Footer: Explore Links */
+.footer-explore ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-explore ul li {
+    margin-bottom: 10px;
+}
+
+.footer-explore ul li a {
+    color: var(--color-gris-texto);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-explore ul li a:hover {
+    color: var(--color-rojo-f1);
+}
+
+/* Footer: Mapa */
+.map-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
