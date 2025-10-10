@@ -1,0 +1,34 @@
+[
+    {
+        "id": "monza",
+        "name": "Monza",
+        "country": "Italia",
+        "difficulty": 7,
+        "length": 5.793,
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Italy_Circuit.png"
+    },
+    {
+        "id": "silverstone",
+        "name": "Silverstone",
+        "country": "Reino Unido",
+        "difficulty": 8,
+        "length": 5.891,
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Great_Britain_Circuit.png"
+    },
+    {
+        "id": "spa-francorchamps",
+        "name": "Spa-Francorchamps",
+        "country": "Bélgica",
+        "difficulty": 9,
+        "length": 7.004,
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Belgium_Circuit.png"
+    },
+    {
+        "id": "bahrain",
+        "name": "Bahrain",
+        "country": "Bahréin",
+        "difficulty": 6,
+        "length": 5.412,
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Bahrain_Circuit.png"
+    }
+]

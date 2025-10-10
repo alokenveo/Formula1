@@ -1,0 +1,49 @@
+<!-- Modal de inicio de sesión -->
+<div id="login-modal" class="auth-modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Contraseña</label>
+                <input type="password" id="login-password" required>
+            </div>
+            <button type="submit" class="submit-btn">Entrar</button>
+        </form>
+        <p class="switch-modal-text">¿No tienes cuenta? <a href="#" id="show-register-modal">Regístrate aquí</a>.
+        </p>
+    </div>
+</div>
+
+<!-- Modal de registro de usuario -->
+<div id="register-modal" class="auth-modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Crear Cuenta</h2>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="register-name">Nombre completo</label>
+                <input type="text" id="register-name" required>
+            </div>
+            <div class="form-group">
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Contraseña</label>
+                <input type="password" id="register-password" required minlength="6">
+            </div>
+            <div class="form-group">
+                <label for="register-password-confirm">Confirmar Contraseña</label>
+                <input type="password" id="register-password-confirm" required>
+            </div>
+            <button type="submit" class="submit-btn">Registrarse</button>
+        </form>
+        <p class="switch-modal-text">¿Ya tienes cuenta? <a href="#" id="switch-to-login-modal">Inicia sesión</a>.
+        </p>
+    </div>
+</div>

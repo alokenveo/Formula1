@@ -1,0 +1,305 @@
+/* ======== PÁGINA DE CARRERAS ======== */
+.race-simulator-section {
+    background-color: #555555;
+    padding: 40px 20px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* --- BARRA DE CONFIGURACIÓN --- */
+.race-config-bar {
+    background-color: #1a1a1a;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.config-group {
+    display: flex;
+    flex-direction: column;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.config-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.config-group select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #666;
+    padding: 8px 10px;
+    border-radius: 5px;
+    appearance: none;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+/* --- ÁREA DE PANTALLA DE CARRERA --- */
+.race-display-area {
+    max-width: 900px;
+    height: 450px; /* Altura fija para el área de visualización */
+    margin: 0 auto 30px auto;
+    background-color: #333;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Importante para el fondo de imagen */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pantalla Pre-Carrera (con imagen de fondo) */
+.pre-race-screen {
+    width: 100%;
+    height: 100%;
+    background-image: url('../resources/img/fondo_carrera.png'); /* Ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-race-btn {
+    background-color: #1F1E1E;/*#E10600;*/
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.start-race-btn:hover {
+    background-color: #b80000;
+    transform: translateY(-2px);
+}
+
+/* Pantalla de Simulación de Carrera */
+.race-simulation-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #2a2a2a; /* Fondo para la simulación */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.race-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #E10600;
+    margin-bottom: 20px;
+}
+
+.track-visualizer {
+    background-color: #1e1e1e; /* Color oscuro del "circuito" */
+    height: 180px; /* Altura de la barra de progreso del circuito */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+#race-car-visualizer {
+    height: 100%;
+    width: 0%; /* Se llenará con JS */
+    background: linear-gradient(90deg, #E10600 0%, #FF8C00 100%); /* Degradado para el "coche" */
+    border-radius: 10px;
+    transition: width 0.1s linear; /* Animación suave del progreso */
+}
+
+.lap-progress-text {
+    position: absolute;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+
+/* --- TABLA DE CLASIFICACIÓN --- */
+.drivers-standings {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.drivers-standings h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #E10600;
+    font-size: 1.8rem;
+}
+
+.standings-header, .standings-item {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 2fr 1fr 1.5fr; /* Columnas para Pos, Piloto, Escudería, Vueltas, Distancia */
+    gap: 10px;
+    padding: 10px 0;
+    align-items: center;
+    text-align: left;
+}
+
+.standings-header {
+    font-weight: bold;
+    color: #E10600;
+    border-bottom: 2px solid #E10600;
+    margin-bottom: 10px;
+}
+
+.standings-list {
+    position: relative; /* Clave para el posicionamiento animado */
+    min-height: 100px; /* Una altura mínima inicial */
+    transition: height 0.5s ease-in-out; /* Animación para el cambio de altura */
+}
+
+.standings-item {
+    display: grid;
+    /* ***** CAMBIO AQUÍ: Ajustamos las columnas para el intervalo ***** */
+    grid-template-columns: 0.5fr 3fr 2fr 1fr 1.5fr;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    text-align: left;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    
+    /* ***** CLAVE PARA LA ANIMACIÓN DE ADELANTAMIENTO ***** */
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: top 0.5s ease-in-out, background-color 0.3s; /* Transición suave de la posición vertical */
+}
+
+.standings-item:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+/* ***** NUEVO: Estilo para resaltar el piloto del usuario ***** */
+.standings-item.user-pilot {
+    background-color: #4a4a2a; /* Un color de fondo distintivo */
+    border-left: 4px solid #FFD700; /* Borde dorado a la izquierda */
+}
+
+.standings-item span {
+    padding: 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.standings-item .driver-name {
+    font-weight: bold;
+    color: white;
+}
+
+.standings-item .team-name {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    .race-config-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .config-group {
+        width: 100%;
+    }
+    .config-group select {
+        width: 100%;
+    }
+    .race-display-area {
+        height: 350px;
+    }
+    .drivers-standings h3 {
+        font-size: 1.5rem;
+    }
+    .standings-header, .standings-item {
+        grid-template-columns: 0.5fr 2.5fr 1.5fr 1fr; /* Ocultamos distancia para móviles */
+    }
+    .standings-item span:nth-child(5) { /* Ocultar distancia */
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .race-display-area {
+        height: 280px;
+    }
+    .start-race-btn {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+    .standings-header, .standings-item {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ***** NUEVO: Contenedor para el Canvas para posicionar los coches ***** */
+.track-visualizer-canvas-container {
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#track-canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Se ajusta al contenedor manteniendo la proporción */
+}
+
+/* ***** NUEVO: Contenedor para los puntos/coches sobre el canvas ***** */
+#cars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.car-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: top 0.1s linear, left 0.1s linear; /* Animación suave del movimiento del coche */
+}
+
+.car-dot.user-car {
+    /* Efecto de pulso para el coche del jugador */
+    box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}

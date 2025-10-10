@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Camiseta F1 Clásica",
+        "type": "ropa",
+        "subtype": "camiseta",
+        "price": 45.00,
+        "sizes": ["S", "M", "L", "XL"],
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSACHDSQhcuHKHBBm8Fa3TBfe9DnysAxFfHTt7msi5yA09Ofa8rje5ArDLWh3Z6boNKCcI-SiRSuklBRlP5-gjtJFvpoDojSRow62CCXNWmgKJULB8bcEoF&usqp=CAc",
+        "description": "Camiseta de algodón suave con el logo clásico de F1."
+    },
+    {
+        "id": 2,
+        "name": "Gorra Red Bull Racing",
+        "type": "gorras",
+        "subtype": "gorra",
+        "price": 30.00,
+        "sizes": ["Talla Única"],
+        "image": "https://static.caphunters.es/46677-large_default/gorra-curva-verde-ajustable-9forty-seasonal-de-red-bull-racing-formula-1-de-new-era.webp",
+        "description": "Gorra oficial de Red Bull Racing, ajustable."
+    },
+    {
+        "id": 3,
+        "name": "Maqueta Ferrari SF-23",
+        "type": "maquetas",
+        "subtype": "coche",
+        "price": 120.00,
+        "sizes": ["Escala 1:18"],
+        "image": "https://cdnx.jumpseller.com/fire-scale-modeler/image/56254940/462146911_1399282201009659_2777748978116019947_n.jpg?1730971419",
+        "description": "Maqueta detallada del monoplaza Ferrari SF-23."
+    },
+    {
+        "id": 4,
+        "name": "Póster Circuito Monza",
+        "type": "posters",
+        "subtype": "circuito",
+        "price": 25.00,
+        "sizes": ["A2"],
+        "image": "https://i.etsystatic.com/22166537/r/il/dac25f/4563702551/il_570xN.4563702551_2x9n.jpg",
+        "description": "Póster ilustrado del mítico circuito de Monza."
+    },
+    {
+        "id": 5,
+        "name": "Llavero Casco F1",
+        "type": "accesorios",
+        "subtype": "llavero",
+        "price": 15.00,
+        "sizes": ["N/A"],
+        "image": "https://www.mickschumachershop.com/dokumente/img/gross/12992/mick-schumacher-llavero-3d-del-casco-2017-spa.jpg",
+        "description": "Llavero metálico con forma de casco de F1."
+    },
+    {
+        "id": 6,
+        "name": "Sudadera Mercedes-AMG",
+        "type": "ropa",
+        "subtype": "sudadera",
+        "price": 80.00,
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "image": "https://m.media-amazon.com/images/I/51x5rK7fzVL._UY1000_.jpg",
+        "description": "Sudadera de alta calidad del equipo Mercedes-AMG."
+    },
+    {
+        "id": 7,
+        "name": "Taza F1 Logo",
+        "type": "accesorios",
+        "subtype": "taza",
+        "price": 20.00,
+        "sizes": ["N/A"],
+        "image": "https://images.footballfanatics.com/formula-1-merchandise/formula-1-logo-mug_ss5_p-14421338+pv-1+u-z3xtqp4qtsgxo5u9lggu+v-bifa2sltdrshwwknuhnr.jpg?_hv=2&w=1018",
+        "description": "Taza cerámica con el logo oficial de Fórmula 1."
+    },
+    {
+        "id": 8,
+        "name": "Peluche Safety Car",
+        "type": "juguetes",
+        "subtype": "peluche",
+        "price": 28.00,
+        "sizes": ["N/A"],
+        "image": "https://img-1.kwcdn.com/product/fancy/140b0693-a00d-4d8e-94be-35dfeae4d104.jpg?imageView2/2/w/264/q/70/format/avif",
+        "description": "Suave peluche del Safety Car de F1."
+    },
+    {
+        "id": 9,
+        "name": "Maqueta Red Bull RB19",
+        "type": "maquetas",
+        "subtype": "coche",
+        "price": 135.00,
+        "sizes": ["Escala 1:18"],
+        "image": "https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/0090159827726_1.jpg",
+        "description": "Réplica del dominante Red Bull RB19."
+    },
+    {
+        "id": 10,
+        "name": "Libro 'Historia de la F1'",
+        "type": "libros",
+        "subtype": "historia",
+        "price": 40.00,
+        "sizes": ["N/A"],
+        "image": "https://m.media-amazon.com/images/I/71efhhVH32L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzU2NTk1OSIgZm9udD0iQW1hem9uRW1iZXIgNTAiID43NTwvc3Bhbj4=,500,900,420,420,0,0_QL100_.jpg",
+        "description": "Un viaje por la historia de la Fórmula 1."
+    }
+]

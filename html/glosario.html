@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glosario | Formula 1 2025</title>
+    <title>Glosario | Fórmula 1 2025</title>
+    <link rel="icon" type="image/png" href="/resources/img/icono.png">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/glosario.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +39,24 @@
                         <li><a href="/html/tienda.html">Tienda</a></li>
                         <li><a href="/html/carreras.html">Carreras</a></li>
                     </ul>
-                    <a href="#" class="signin-btn">Sign In</a>
+                    <div class="user-profile">
+                        <button class="user-btn" aria-label="Perfil de usuario">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" width="20"
+                                height="20">
+                                <path
+                                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#" id="show-login-modal">Iniciar Sesión</a>
+
+                            <div id="user-logged-in-options" style="display: none;">
+                                <a href="#">Mi Información</a>
+                                <a href="#">Mis Compras</a>
+                                <a href="#" id="logout-btn">Cerrar Sesión</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -93,6 +111,56 @@
         </div>
     </footer>
 
+    <!-- Modal de inicio de sesión -->
+    <div id="login-modal" class="auth-modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Entrar</button>
+            </form>
+            <p class="switch-modal-text">¿No tienes cuenta? <a href="#" id="show-register-modal">Regístrate aquí</a>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal de registro de usuario -->
+    <div id="register-modal" class="auth-modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Crear Cuenta</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Nombre completo</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Contraseña</label>
+                    <input type="password" id="register-password" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="register-password-confirm">Confirmar Contraseña</label>
+                    <input type="password" id="register-password-confirm" required>
+                </div>
+                <button type="submit" class="submit-btn">Registrarse</button>
+            </form>
+            <p class="switch-modal-text">¿Ya tienes cuenta? <a href="#" id="switch-to-login-modal">Inicia sesión</a>.
+            </p>
+        </div>
+    </div>
+
     <script>
         // Se ejecuta cuando todo el contenido de la página se ha cargado
         document.addEventListener("DOMContentLoaded", () => {
@@ -142,6 +210,7 @@
                 .catch(error => console.error('Error al cargar el glosario:', error)); // Muestra un error si no se encuentra el archivo
         });
     </script>
+    <script src="/js/usuario.js"></script>
 </body>
 
 </html>

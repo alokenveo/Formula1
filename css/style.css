@@ -71,11 +71,11 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-/* Lado derecho de la barra (enlaces y botón Sign In) */
+/* Lado derecho de la barra (enlaces y botón User Profile) */
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 25px; /* Espacio entre la lista de enlaces y el botón "Sign In" */
+    gap: 25px; /* Espacio entre la lista de enlaces y el botón "User Profile" */
 }
 
 .nav-links {
@@ -128,8 +128,8 @@ h1, h2, h3 {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 100;
     border-radius: 8px;
-    padding: 10px 0;
-    margin-top: 10px;
+    padding: 5px 0;
+    margin-top: 3px;
 }
 
 /* Mostrar el dropdown al hacer hover sobre el contenedor */

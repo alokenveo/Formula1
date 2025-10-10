@@ -1,0 +1,259 @@
+/* ======== PÁGINA DE TIENDA ======== */
+.shop-section {
+    background-color: #555555; /* Fondo gris oscuro */
+    padding: 40px 20px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* --- BARRA DE FILTROS --- */
+.shop-filters-bar {
+    background-color: #1a1a1a; /* Fondo oscuro para la barra de filtros */
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espacio entre los grupos de filtros */
+    flex-wrap: wrap; /* Para que los filtros se adapten en pantallas pequeñas */
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.filter-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Selector de Tipo */
+#product-type {
+    background-color: #333;
+    color: white;
+    border: 1px solid #666;
+    padding: 8px 10px;
+    border-radius: 5px;
+    appearance: none; /* Eliminar estilo nativo del select */
+    min-width: 150px;
+    cursor: pointer;
+}
+
+/* Rango de Precio */
+.price-range input[type="range"] {
+    width: 150px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #666;
+    outline: none;
+    border-radius: 5px;
+}
+
+.price-range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #E10600;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.price-range input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #E10600;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+#price-value {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #E10600;
+}
+
+
+/* Checkboxes de Tamaño */
+.size-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.size-checkboxes input[type="checkbox"] {
+    display: none; /* Ocultar el checkbox real */
+}
+
+.size-checkboxes label {
+    background-color: #444;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #666;
+    transition: background-color 0.2s, border-color 0.2s;
+    font-size: 0.85rem;
+    margin-bottom: 0; /* Anula el margin-bottom del label general */
+}
+
+.size-checkboxes input[type="checkbox"]:checked + label {
+    background-color: #E10600; /* Color cuando está seleccionado */
+    border-color: #E10600;
+    color: white;
+}
+
+.size-checkboxes label:hover {
+    background-color: #555;
+}
+
+/* Icono del carrito */
+.cart-icon-container {
+    align-self: flex-start; /* Para que esté alineado con la parte superior de la barra */
+}
+.cart-btn {
+    background-color: #E10600;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+.cart-btn:hover {
+    background-color: #b80000;
+}
+.cart-btn i {
+    vertical-align: middle;
+}
+
+
+/* --- GRID DE PRODUCTOS --- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Ajusta el tamaño de las cards */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- ESTILO DE CADA TARJETA DE PRODUCTO --- */
+.product-card {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón al final */
+}
+
+.product-image-container {
+    width: 100%;
+    height: 180px; /* Altura fija para las imágenes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444; /* Fondo si no hay imagen */
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Para que la imagen se ajuste sin cortarse */
+}
+
+.product-image.placeholder {
+    font-size: 4rem;
+    color: #777;
+    position: absolute;
+}
+.product-image.placeholder::after {
+    content: '📦'; /* Icono de caja como placeholder */
+}
+
+
+.product-info {
+    padding: 15px;
+    flex-grow: 1; /* Permite que la info ocupe espacio si no hay mucho en el botón */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #E10600;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    background-color: #E10600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #b80000;
+}
+
+.add-to-cart-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+}
+
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    .shop-filters-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .filter-group {
+        width: 100%;
+    }
+    #product-type, .price-range input[type="range"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+}

@@ -6,6 +6,7 @@
             "country": "Reino Unido",
             "team": "Ferrari",
             "number": 44,
+            "skill": 9.5,
             "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LEWHAM00/lewham00.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 7,
@@ -20,6 +21,7 @@
             "country": "Mónaco",
             "team": "Ferrari",
             "number": 16,
+            "skill": 8.8,
             "image": "https://media.formula1.com/content/dam/fom-website/drivers/C/CHALEC00/chalec00.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 0,
@@ -34,6 +36,7 @@
             "country": "Reino Unido",
             "team": "McLaren",
             "number": 4,
+            "skill": 8.7,
             "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LANNOR01/lannor01.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 0,
@@ -48,6 +51,7 @@
             "country": "Australia",
             "team": "McLaren",
             "number": 81,
+            "skill": 8.2,
             "image": "https://media.formula1.com/content/dam/fom-website/drivers/O/OSCPIA01/oscpia01.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 0,
@@ -62,6 +66,7 @@
             "country": "Países Bajos",
             "team": "Red Bull Racing",
             "number": 1,
+            "skill": 9.8,
             "image": "https://media.formula1.com/content/dam/fom-website/drivers/M/MAXVER01/maxver01.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 3,
@@ -76,12 +81,58 @@
             "country": "México",
             "team": "Red Bull Racing",
             "number": 11,
+            "skill": 8.5,
             "image": "https://media.formula1.com/content/dam/fom-website/drivers/S/SERPER01/serper01.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 0,
                 "wins": 6,
                 "podiums": 39,
                 "firstEntry": "2011 Australian GP"
+            }
+        },
+        {
+            "id": "sainz",
+            "name": "Carlos Sainz Jr.",
+            "country": "España",
+            "team": "Ferrari",
+            "number": 55,
+            "skill": 8.6,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/C/CARSAI01/carsai01.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 3,
+                "podiums": 21,
+                "firstEntry": "2015 Australian GP"
+            }
+        },
+        {
+            "id": "russell",
+            "name": "George Russell",
+            "country": "Reino Unido",
+            "team": "Mercedes-AMG",
+            "number": 63,
+            "skill": 8.9,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/G/GEORUS01/georus01.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 1,
+                "podiums": 11,
+                "firstEntry": "2019 Australian GP"
+            }
+        },
+        {
+            "id": "alonso",
+            "name": "Fernando Alonso",
+            "country": "España",
+            "team": "Aston Martin",
+            "number": 14,
+            "skill": 9.2,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/F/FERALO01/feralo01.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 2,
+                "wins": 32,
+                "podiums": 106,
+                "firstEntry": "2001 Australian GP"
             }
         }
     ],
@@ -91,6 +142,7 @@
             "name": "Scuderia Ferrari",
             "country": "Italia",
             "teamPrincipal": "Frédéric Vasseur",
+            "carPerformance": 9.0,
             "image": "https://media.formula1.com/content/dam/fom-website/teams/Ferrari/ferrari-logo.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 16,
@@ -104,6 +156,7 @@
             "name": "McLaren Formula 1 Team",
             "country": "Reino Unido",
             "teamPrincipal": "Andrea Stella",
+            "carPerformance": 8.8,
             "image": "https://media.formula1.com/content/dam/fom-website/teams/McLaren/mclaren-logo.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 8,
@@ -117,6 +170,7 @@
             "name": "Red Bull Racing",
             "country": "Austria",
             "teamPrincipal": "Christian Horner",
+            "carPerformance": 9.5,
             "image": "https://media.formula1.com/content/dam/fom-website/teams/Red%20Bull/red-bull-logo.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 6,
@@ -130,6 +184,7 @@
             "name": "Mercedes-AMG Petronas F1 Team",
             "country": "Alemania",
             "teamPrincipal": "Toto Wolff",
+            "carPerformance": 8.9,
             "image": "https://media.formula1.com/content/dam/fom-website/teams/Mercedes/mercedes-logo.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 8,
@@ -143,6 +198,7 @@
             "name": "Aston Martin Aramco F1 Team",
             "country": "Reino Unido",
             "teamPrincipal": "Mike Krack",
+            "carPerformance": 8.7,
             "image": "https://media.formula1.com/content/dam/fom-website/teams/Aston%20Martin/aston-martin-logo.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 0,
