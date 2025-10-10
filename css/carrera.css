@@ -303,3 +303,72 @@
     box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.9);
     transform: scale(1.2);
 }
+
+
+/* --- Estilo para el botón de detener --- */
+.stop-race-btn {
+    background-color: #555;
+    color: white;
+    border: 2px solid #ccc;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.stop-race-btn:hover {
+    background-color: #E10600;
+    border-color: #E10600;
+}
+
+/* --- Estilo para el modal de fin de carrera --- */
+.race-end-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.race-end-modal .modal-content {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.race-end-modal h2 {
+    color: #E10600;
+    margin-bottom: 15px;
+}
+
+.race-end-modal h3 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.race-end-modal p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.race-end-modal .submit-btn {
+    width: 50%;
+    margin: 0 auto;
+}

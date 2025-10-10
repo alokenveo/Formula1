@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const canvas = document.getElementById('track-canvas');
     const ctx = canvas.getContext('2d');
     const carsContainer = document.getElementById('cars-container');
+    const stopRaceBtn = document.getElementById('stop-race-btn');
+    const raceEndModal = document.getElementById('race-end-modal');
+    const restartRaceBtn = document.getElementById('restart-race-btn');
+    const winnerNameEl = document.getElementById('winner-name');
+    const winnerTeamEl = document.getElementById('winner-team');
 
     // --- DATOS Y ESTADO DE LA CARRERA ---
     let allPilots = [];
@@ -108,11 +113,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         const userPilot = allPilots.find(p => p.id === userSelectedPilotId);
 
         raceParticipants = [userPilot, ...otherPilots].map(pilot => {
-            const team = allTeams.find(t => t.name === pilot.team);
+            const team = allTeams.find(t => t.id === pilot.teamId); // Usamos teamId
             return {
                 id: pilot.id,
                 name: pilot.name,
                 teamName: team ? team.name : 'Unknown',
+                teamId: pilot.teamId,
                 skill: pilot.skill,
                 carPerformance: team ? team.carPerformance : 5.0,
                 lapsCompleted: 0,
@@ -253,8 +259,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 carDot.classList.add('user-car');
             }
 
-            const team = allTeams.find(t => t.name === pilot.teamName);
-            // Asegúrate de tener un campo 'color' en tus datos de escuderías en f1.json
+            const team = allTeams.find(t => t.id === pilot.teamId); // Usamos teamId
             carDot.style.backgroundColor = team ? team.color || '#FFFFFF' : '#FFFFFF';
             carDot.style.left = `${x - 6}px`;
             carDot.style.top = `${y - 6}px`;
@@ -307,18 +312,29 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function displayRaceResults() {
         const winner = raceParticipants[0];
-        alert(`¡Carrera Terminada! El ganador es: ${winner.name} de ${winner.teamName}`);
-        // Opcional: podrías mostrar un botón para reiniciar en lugar de un alert
+        winnerNameEl.textContent = winner.name;
+        winnerTeamEl.textContent = winner.teamName;
+        raceEndModal.style.display = 'flex'; // Mostrar el modal
+    }
+
+    function stopRace() {
+        clearInterval(raceInterval);
+        raceInterval = null;
+        alert('La carrera ha sido detenida. La página se recargará.');
+        location.reload();
     }
 
     // --- EVENT LISTENERS ---
     startRaceBtn.addEventListener('click', () => {
         if (startRaceBtn.disabled) return;
         startRaceBtn.disabled = true; // Prevenir múltiples clics
-        if (setupRace()) {
-            // La carrera se inicia dentro de setupRace
-        }
+        setupRace();
         setTimeout(() => { startRaceBtn.disabled = false; }, 2000); // Reactivar botón después de 2s
+    });
+
+    stopRaceBtn.addEventListener('click', stopRace);
+    restartRaceBtn.addEventListener('click', () => {
+        location.reload(); // Recargar la página
     });
 
     // --- INICIALIZACIÓN ---

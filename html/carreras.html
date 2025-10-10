@@ -80,9 +80,9 @@
                 <div class="config-group">
                     <label for="select-laps">Vueltas</label>
                     <select id="select-laps">
+                        <option value="3">3 Vueltas</option>
                         <option value="5">5 Vueltas</option>
                         <option value="10">10 Vueltas</option>
-                        <option value="15">15 Vueltas</option>
                     </select>
                 </div>
                 <div class="config-group">
@@ -104,6 +104,7 @@
                 <div id="race-simulation-screen" class="race-simulation-screen" style="display: none;">
                     <div class="race-info">
                         <span id="current-lap-display">Vuelta: 0 / 0</span>
+                        <button id="stop-race-btn" class="stop-race-btn">DETENER</button>
                         <span id="track-name-display"></span>
                     </div>
                     <div class="track-visualizer-canvas-container">
@@ -124,6 +125,16 @@
                     <span>Intervalo</span>
                 </div>
                 <div id="standings-list" class="standings-list">
+                </div>
+            </div>
+
+            <div id="race-end-modal" class="race-end-modal" style="display: none;">
+                <div class="modal-content">
+                    <h2>¡Carrera Finalizada!</h2>
+                    <p>El ganador es:</p>
+                    <h3 id="winner-name"></h3>
+                    <p id="winner-team"></p>
+                    <button id="restart-race-btn" class="submit-btn">OK</button>
                 </div>
             </div>
         </section>

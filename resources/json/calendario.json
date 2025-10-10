@@ -33,5 +33,138 @@
         "circuitName": "Circuito de la Corniche de Yeda",
         "location": "Yeda, Arabia Saudí",
         "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Saudi_Arabia_Circuit.png"
+    },
+    {
+        "date": "2025-05-04",
+        "gpName": "Gran Premio de Miami",
+        "circuitName": "Autódromo Internacional de Miami",
+        "location": "Miami, Estados Unidos",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Miami_Circuit.png"
+    },
+    {
+        "date": "2025-05-18",
+        "gpName": "Gran Premio de Emilia-Romaña",
+        "circuitName": "Autodromo Enzo e Dino Ferrari",
+        "location": "Imola, Italia",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Emilia_Romagna_Circuit.png"
+    },
+    {
+        "date": "2025-05-25",
+        "gpName": "Gran Premio de Mónaco",
+        "circuitName": "Circuito de Mónaco",
+        "location": "Montecarlo, Mónaco",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Monoco_Circuit.png"
+    },
+    {
+        "date": "2025-06-01",
+        "gpName": "Gran Premio de España",
+        "circuitName": "Circuit de Barcelona-Catalunya",
+        "location": "Montmeló, España",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Spain_Circuit.png"
+    },
+    {
+        "date": "2025-06-15",
+        "gpName": "Gran Premio de Canadá",
+        "circuitName": "Circuito Gilles Villeneuve",
+        "location": "Montreal, Canadá",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Canada_Circuit.png"
+    },
+    {
+        "date": "2025-06-29",
+        "gpName": "Gran Premio de Austria",
+        "circuitName": "Red Bull Ring",
+        "location": "Spielberg, Austria",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Austria_Circuit.png"
+    },
+    {
+        "date": "2025-07-06",
+        "gpName": "Gran Premio de Gran Bretaña",
+        "circuitName": "Circuito de Silverstone",
+        "location": "Silverstone, Reino Unido",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Great_Britain_Circuit.png"
+    },
+    {
+        "date": "2025-07-27",
+        "gpName": "Gran Premio de Bélgica",
+        "circuitName": "Circuito de Spa-Francorchamps",
+        "location": "Stavelot, Bélgica",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Belgium_Circuit.png"
+    },
+    {
+        "date": "2025-08-03",
+        "gpName": "Gran Premio de Hungría",
+        "circuitName": "Hungaroring",
+        "location": "Mogyoród, Hungría",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Hungary_Circuit.png"
+    },
+    {
+        "date": "2025-08-31",
+        "gpName": "Gran Premio de los Países Bajos",
+        "circuitName": "Circuito de Zandvoort",
+        "location": "Zandvoort, Países Bajos",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Netherlands_Circuit.png"
+    },
+    {
+        "date": "2025-09-07",
+        "gpName": "Gran Premio de Italia",
+        "circuitName": "Autodromo Nazionale Monza",
+        "location": "Monza, Italia",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Italy_Circuit.png"
+    },
+    {
+        "date": "2025-09-21",
+        "gpName": "Gran Premio de Azerbaiyán",
+        "circuitName": "Circuito callejero de Bakú",
+        "location": "Bakú, Azerbaiyán",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Azerbaijan_Circuit.png"
+    },
+    {
+        "date": "2025-10-05",
+        "gpName": "Gran Premio de Singapur",
+        "circuitName": "Circuito callejero de Marina Bay",
+        "location": "Singapur",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Singapore_Circuit.png"
+    },
+    {
+        "date": "2025-10-19",
+        "gpName": "Gran Premio de los Estados Unidos",
+        "circuitName": "Circuito de las Américas",
+        "location": "Austin, Estados Unidos",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/USA_Circuit.png"
+    },
+    {
+        "date": "2025-10-26",
+        "gpName": "Gran Premio de la Ciudad de México",
+        "circuitName": "Autódromo Hermanos Rodríguez",
+        "location": "Ciudad de México, México",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Mexico_Circuit.png"
+    },
+    {
+        "date": "2025-11-09",
+        "gpName": "Gran Premio de São Paulo",
+        "circuitName": "Autódromo José Carlos Pace",
+        "location": "São Paulo, Brasil",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Brazil_Circuit.png"
+    },
+    {
+        "date": "2025-11-22",
+        "gpName": "Gran Premio de Las Vegas",
+        "circuitName": "Circuito callejero de Las Vegas",
+        "location": "Las Vegas, Estados Unidos",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Las_Vegas_Circuit.png"
+    },
+    {
+        "date": "2025-11-30",
+        "gpName": "Gran Premio de Qatar",
+        "circuitName": "Circuito Internacional de Lusail",
+        "location": "Lusail, Qatar",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Qatar_Circuit.png"
+    },
+    {
+        "date": "2025-12-07",
+        "gpName": "Gran Premio de Abu Dabi",
+        "circuitName": "Circuito Yas Marina",
+        "location": "Abu Dabi, Emiratos Árabes Unidos",
+        "image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto,c_limit,w_1320,q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Abu_Dhabi_Circuit.png"
     }
 ]

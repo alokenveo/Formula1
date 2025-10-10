@@ -4,7 +4,7 @@
             "id": "hamilton",
             "name": "Lewis Hamilton",
             "country": "Reino Unido",
-            "team": "Ferrari",
+            "teamId": "ferrari",
             "number": 44,
             "skill": 9.5,
             "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LEWHAM00/lewham00.png.transform/2col/image.png",
@@ -19,7 +19,7 @@
             "id": "leclerc",
             "name": "Charles Leclerc",
             "country": "Mónaco",
-            "team": "Ferrari",
+            "teamId": "ferrari",
             "number": 16,
             "skill": 8.8,
             "image": "https://media.formula1.com/content/dam/fom-website/drivers/C/CHALEC00/chalec00.png.transform/2col/image.png",
@@ -34,14 +34,14 @@
             "id": "norris",
             "name": "Lando Norris",
             "country": "Reino Unido",
-            "team": "McLaren",
+            "teamId": "mclaren",
             "number": 4,
-            "skill": 8.7,
-            "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LANNOR01/lannor01.png.transform/2col/image.png",
+            "skill": 9.0,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LANNOR00/lannor00.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 0,
                 "wins": 1,
-                "podiums": 16,
+                "podiums": 15,
                 "firstEntry": "2019 Australian GP"
             }
         },
@@ -49,29 +49,29 @@
             "id": "piastri",
             "name": "Oscar Piastri",
             "country": "Australia",
-            "team": "McLaren",
+            "teamId": "mclaren",
             "number": 81,
-            "skill": 8.2,
-            "image": "https://media.formula1.com/content/dam/fom-website/drivers/O/OSCPIA01/oscpia01.png.transform/2col/image.png",
+            "skill": 8.5,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/O/OSCPIA00/oscpia00.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 0,
-                "wins": 0,
-                "podiums": 3,
+                "wins": 2,
+                "podiums": 4,
                 "firstEntry": "2023 Bahrain GP"
             }
         },
         {
-            "id": "max",
+            "id": "verstappen",
             "name": "Max Verstappen",
             "country": "Países Bajos",
-            "team": "Red Bull Racing",
+            "teamId": "redbull",
             "number": 1,
             "skill": 9.8,
-            "image": "https://media.formula1.com/content/dam/fom-website/drivers/M/MAXVER01/maxver01.png.transform/2col/image.png",
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/M/MAXVER00/maxver00.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 3,
                 "wins": 60,
-                "podiums": 104,
+                "podiums": 105,
                 "firstEntry": "2015 Australian GP"
             }
         },
@@ -79,10 +79,10 @@
             "id": "perez",
             "name": "Sergio Pérez",
             "country": "México",
-            "team": "Red Bull Racing",
+            "teamId": "redbull",
             "number": 11,
-            "skill": 8.5,
-            "image": "https://media.formula1.com/content/dam/fom-website/drivers/S/SERPER01/serper01.png.transform/2col/image.png",
+            "skill": 8.2,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/S/SERPER00/serper00.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 0,
                 "wins": 6,
@@ -92,12 +92,12 @@
         },
         {
             "id": "sainz",
-            "name": "Carlos Sainz Jr.",
+            "name": "Carlos Sainz",
             "country": "España",
-            "team": "Ferrari",
+            "teamId": "ferrari",
             "number": 55,
-            "skill": 8.6,
-            "image": "https://media.formula1.com/content/dam/fom-website/drivers/C/CARSAI01/carsai01.png.transform/2col/image.png",
+            "skill": 8.7,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/C/CARSAI00/carsai00.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 0,
                 "wins": 3,
@@ -109,10 +109,10 @@
             "id": "russell",
             "name": "George Russell",
             "country": "Reino Unido",
-            "team": "Mercedes-AMG",
+            "teamId": "mercedes",
             "number": 63,
-            "skill": 8.9,
-            "image": "https://media.formula1.com/content/dam/fom-website/drivers/G/GEORUS01/georus01.png.transform/2col/image.png",
+            "skill": 8.6,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/G/GEORUS00/georus00.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 0,
                 "wins": 1,
@@ -124,15 +124,180 @@
             "id": "alonso",
             "name": "Fernando Alonso",
             "country": "España",
-            "team": "Aston Martin",
+            "teamId": "astonmartin",
             "number": 14,
             "skill": 9.2,
-            "image": "https://media.formula1.com/content/dam/fom-website/drivers/F/FERALO01/feralo01.png.transform/2col/image.png",
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/F/FERALO00/feralo00.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 2,
                 "wins": 32,
                 "podiums": 106,
                 "firstEntry": "2001 Australian GP"
+            }
+        },
+        {
+            "id": "stroll",
+            "name": "Lance Stroll",
+            "country": "Canadá",
+            "teamId": "astonmartin",
+            "number": 18,
+            "skill": 7.5,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LANSTR00/lanstr00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 0,
+                "podiums": 3,
+                "firstEntry": "2017"
+            }
+        },
+        {
+            "id": "ocon",
+            "name": "Esteban Ocon",
+            "country": "Francia",
+            "teamId": "alpine",
+            "number": 31,
+            "skill": 8.1,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/E/ESTOCO00/estoco00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 1,
+                "podiums": 4,
+                "firstEntry": "2016 Belgian GP"
+            }
+        },
+        {
+            "id": "gasly",
+            "name": "Pierre Gasly",
+            "country": "Francia",
+            "teamId": "alpine",
+            "number": 10,
+            "skill": 8.3,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/P/PIEGAS00/piegas00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 1,
+                "podiums": 5,
+                "firstEntry": "2017"
+            }
+        },
+        {
+            "id": "magnussen",
+            "name": "Kevin Magnussen",
+            "country": "Dinamarca",
+            "teamId": "haas",
+            "number": 20,
+            "skill": 7.8,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/K/KEVMAG00/kevmag00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 0,
+                "podiums": 1,
+                "firstEntry": "2014"
+            }
+        },
+        {
+            "id": "hulkenberg",
+            "name": "Nico Hülkenberg",
+            "country": "Alemania",
+            "teamId": "haas",
+            "number": 27,
+            "skill": 8.0,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/N/NICHUL00/nichul00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 0,
+                "podiums": 0,
+                "firstEntry": "2010"
+            }
+        },
+        {
+            "id": "tsunoda",
+            "name": "Yuki Tsunoda",
+            "country": "Japón",
+            "teamId": "rb",
+            "number": 22,
+            "skill": 7.9,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/Y/YUKTSU00/yuktsu00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 0,
+                "podiums": 0,
+                "firstEntry": "2021 Bahrain Grand Prix"
+            }
+        },
+        {
+            "id": "ricciardo",
+            "name": "Daniel Ricciardo",
+            "country": "Australia",
+            "teamId": "rb",
+            "number": 3,
+            "skill": 8.4,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/D/DANRIC00/danric00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 8,
+                "podiums": 32,
+                "firstEntry": "2011 British GP"
+            }
+        },
+        {
+            "id": "bottas",
+            "name": "Valtteri Bottas",
+            "country": "Finlandia",
+            "teamId": "sauber",
+            "number": 77,
+            "skill": 8.3,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/V/VALBOT00/valbot00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 10,
+                "podiums": 67,
+                "firstEntry": "2013 Australian GP"
+            }
+        },
+        {
+            "id": "zhou",
+            "name": "Zhou Guanyu",
+            "country": "China",
+            "teamId": "sauber",
+            "number": 24,
+            "skill": 7.4,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/G/GUAZHO00/guazho00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 0,
+                "podiums": 0,
+                "firstEntry": "2022 Bahrain Grand Prix"
+            }
+        },
+        {
+            "id": "albon",
+            "name": "Alexander Albon",
+            "country": "Tailandia",
+            "teamId": "williams",
+            "number": 23,
+            "skill": 8.5,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/A/ALEALB00/alealb00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 0,
+                "podiums": 2,
+                "firstEntry": "2019"
+            }
+        },
+        {
+            "id": "sargeant",
+            "name": "Logan Sargeant",
+            "country": "Estados Unidos",
+            "teamId": "williams",
+            "number": 2,
+            "skill": 7.0,
+            "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LOGSAR00/logsar00.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 0,
+                "podiums": 0,
+                "firstEntry": "2023 Bahrain"
             }
         }
     ],
@@ -141,22 +306,24 @@
             "id": "ferrari",
             "name": "Scuderia Ferrari",
             "country": "Italia",
+            "color": "#dc0000",
             "teamPrincipal": "Frédéric Vasseur",
-            "carPerformance": 9.0,
+            "carPerformance": 9.2,
             "image": "https://media.formula1.com/content/dam/fom-website/teams/Ferrari/ferrari-logo.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 16,
-                "wins": 244,
+                "wins": 243,
                 "poles": 249,
                 "firstEntry": "1950 Monaco GP"
             }
         },
         {
             "id": "mclaren",
-            "name": "McLaren Formula 1 Team",
+            "name": "McLaren F1 Team",
             "country": "Reino Unido",
+            "color": "#ff8700",
             "teamPrincipal": "Andrea Stella",
-            "carPerformance": 8.8,
+            "carPerformance": 9.5,
             "image": "https://media.formula1.com/content/dam/fom-website/teams/McLaren/mclaren-logo.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 8,
@@ -167,10 +334,11 @@
         },
         {
             "id": "redbull",
-            "name": "Red Bull Racing",
+            "name": "Oracle Red Bull Racing",
             "country": "Austria",
+            "color": "#0600ef",
             "teamPrincipal": "Christian Horner",
-            "carPerformance": 9.5,
+            "carPerformance": 9.8,
             "image": "https://media.formula1.com/content/dam/fom-website/teams/Red%20Bull/red-bull-logo.png.transform/2col/image.png",
             "backInfo": {
                 "championships": 6,
@@ -183,6 +351,7 @@
             "id": "mercedes",
             "name": "Mercedes-AMG Petronas F1 Team",
             "country": "Alemania",
+            "color": "#00d2be",
             "teamPrincipal": "Toto Wolff",
             "carPerformance": 8.9,
             "image": "https://media.formula1.com/content/dam/fom-website/teams/Mercedes/mercedes-logo.png.transform/2col/image.png",
@@ -197,6 +366,7 @@
             "id": "astonmartin",
             "name": "Aston Martin Aramco F1 Team",
             "country": "Reino Unido",
+            "color": "#006f62",
             "teamPrincipal": "Mike Krack",
             "carPerformance": 8.7,
             "image": "https://media.formula1.com/content/dam/fom-website/teams/Aston%20Martin/aston-martin-logo.png.transform/2col/image.png",
@@ -204,7 +374,82 @@
                 "championships": 0,
                 "wins": 0,
                 "poles": 0,
-                "firstEntry": "2021 Bahrain GP"
+                "firstEntry": "1959 Dutch GP"
+            }
+        },
+        {
+            "id": "alpine",
+            "name": "Alpine F1 Team",
+            "country": "Francia",
+            "color": "#0090ff",
+            "teamPrincipal": "Flavio Briatore",
+            "carPerformance": 7.8,
+            "image": "https://media.formula1.com/content/dam/fom-website/teams/Alpine/alpine-logo.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 1,
+                "poles": 0,
+                "firstEntry": "2021"
+            }
+        },
+        {
+            "id": "haas",
+            "name": "Haas F1 Team",
+            "country": "Estados Unidos",
+            "color": "#ffffff",
+            "teamPrincipal": "Ayao Komatsu",
+            "carPerformance": 7.2,
+            "image": "https://media.formula1.com/content/dam/fom-website/teams/Haas/haas-logo.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 0,
+                "poles": 1,
+                "firstEntry": "2016"
+            }
+        },
+        {
+            "id": "rb",
+            "name": "Visa Cash App RB Formula One Team",
+            "country": "Italia",
+            "color": "#0028ff",
+            "teamPrincipal": "Alan Permane",
+            "carPerformance": 7.5,
+            "image": "https://media.formula1.com/content/dam/fom-website/teams/Racing%20Bulls/racing-bulls-logo.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 2,
+                "poles": 1,
+                "firstEntry": "1985"
+            }
+        },
+        {
+            "id": "sauber",
+            "name": "Stake F1 Team Kick Sauber",
+            "country": "Suiza",
+            "color": "#00ff00",
+            "teamPrincipal": "Alessandro Alunni Bravi",
+            "carPerformance": 6.8,
+            "image": "https://media.formula1.com/content/dam/fom-website/teams/Sauber/sauber-logo.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 0,
+                "wins": 1,
+                "poles": 1,
+                "firstEntry": "1993"
+            }
+        },
+        {
+            "id": "williams",
+            "name": "Williams Racing",
+            "country": "Reino Unido",
+            "color": "#005aff",
+            "teamPrincipal": "James Vowles",
+            "carPerformance": 7.0,
+            "image": "https://media.formula1.com/content/dam/fom-website/teams/Williams/williams-logo.png.transform/2col/image.png",
+            "backInfo": {
+                "championships": 9,
+                "wins": 114,
+                "poles": 128,
+                "firstEntry": "1977"
             }
         }
     ]
