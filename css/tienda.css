@@ -257,3 +257,183 @@
         grid-template-columns: 1fr; /* Una columna en móviles */
     }
 }
+
+/* ... (Añade esto al final de tu tienda.css) ... */
+
+/* --- Contador del Carrito --- */
+.cart-btn {
+    position: relative; /* Necesario para posicionar el contador */
+}
+
+.cart-counter {
+    position: absolute;
+    bottom: -5px;
+    right: -8px;
+    background-color: white;
+    color: #E10600;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #1a1a1a;
+}
+
+/* --- Modal del Carrito --- */
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-modal .modal-content {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-modal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-items-container {
+    overflow-y: auto; /* Scroll si hay muchos productos */
+    flex-grow: 1;
+    padding-right: 10px; /* Espacio para la barra de scroll */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 15px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.cart-item-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.cart-item-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #E10600;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: color 0.2s;
+}
+
+.remove-item-btn:hover {
+    color: #E10600;
+}
+
+.cart-empty-message {
+    text-align: center;
+    color: #888;
+    padding: 40px 0;
+}
+
+.cart-summary {
+    border-top: 1px solid #666;
+    margin-top: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    background-color: #E10600;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.checkout-btn:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* --- Modal de Confirmación --- */
+.confirmation-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-modal .modal-content {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.checkmark-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+    color: #28a745; /* Verde de éxito */
+}

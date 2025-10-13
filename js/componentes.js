@@ -1,31 +1,34 @@
-// Espera a que el contenido del DOM esté completamente cargado
-document.addEventListener("DOMContentLoaded", () => {
-    // Selecciona todos los elementos que tienen el atributo 'data-include'
-    const elementsToInclude = document.querySelectorAll('[data-include]');
+// Esta función carga un único componente y devuelve una promesa
+async function cargarComponente(id, url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
+        const data = await response.text();
+        document.getElementById(id).innerHTML = data;
+    } catch (error) {
+        console.error(`Error cargando el componente ${url}:`, error);
+        // Opcional: Muestra un error en la página si el componente no carga
+        document.getElementById(id).innerHTML = `<p style="color:red;">Error al cargar componente.</p>`;
+    }
+}
 
-    // Itera sobre cada elemento encontrado
-    elementsToInclude.forEach(el => {
-        // Obtiene la ruta del archivo a incluir desde el atributo
-        const fileUrl = el.getAttribute('data-include');
+// Esta función se llamará DESPUÉS de que todos los componentes se hayan cargado
+function inicializarScriptsDependientes() {
+    // Comprueba si la función de inicialización del usuario existe y la llama
+    if (typeof initUsuarioLogic === 'function') {
+        initUsuarioLogic();
+    }
+    // Si tuvieras otros scripts que dependen de componentes, los llamarías aquí
+}
 
-        // Usa fetch para obtener el contenido del archivo HTML
-        fetch(fileUrl)
-            .then(response => {
-                // Si la respuesta no es OK (ej. error 404), lanza un error
-                if (!response.ok) {
-                    throw new Error(`No se pudo cargar el archivo: ${fileUrl}`);
-                }
-                // Si la respuesta es OK, devuelve el contenido como texto
-                return response.text();
-            })
-            .then(html => {
-                // Inserta el HTML obtenido dentro del elemento contenedor
-                el.innerHTML = html;
-            })
-            .catch(error => {
-                // Si hay algún error, lo muestra en la consola y en el propio elemento
-                console.error('Error al incluir el componente:', error);
-                el.innerHTML = `<p style="color:red;">Error al cargar ${fileUrl}</p>`;
-            });
-    });
+// Evento principal que se ejecuta cuando el HTML base está listo
+document.addEventListener("DOMContentLoaded", async () => {
+    // Carga todos los componentes en paralelo y espera a que todos terminen
+    await Promise.all([
+        cargarComponente("encabezado", "/html/componentes/header.html"),
+        cargarComponente("pie", "/html/componentes/footer.html") // Asegúrate de tener un div con id="pie" para el footer
+    ]);
+
+    // Ahora que los componentes están en el DOM, podemos inicializar los scripts que los usan
+    inicializarScriptsDependientes();
 });

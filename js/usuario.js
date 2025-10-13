@@ -1,6 +1,8 @@
-
-document.addEventListener("DOMContentLoaded", () => {
+// Envolvemos toda la lógica en una función que será llamada por componentes.js
+function initUsuarioLogic() {
+    
     // --- ELEMENTOS DEL DOM ---
+    // Ahora estamos seguros de que estos elementos existen en la página
     const loginModal = document.getElementById('login-modal');
     const registerModal = document.getElementById('register-modal');
     const showLoginBtn = document.getElementById('show-login-modal');
@@ -11,11 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateUserUI() {
         const currentUser = JSON.parse(localStorage.getItem('f1_currentUser'));
         if (currentUser) {
-            // Usuario Logueado
             showLoginBtn.style.display = 'none';
             loggedInOptions.style.display = 'block';
         } else {
-            // Usuario No Logueado
             showLoginBtn.style.display = 'block';
             loggedInOptions.style.display = 'none';
         }
@@ -23,15 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- MANEJO DE MODALES ---
     function openModal(modal) {
-        modal.style.display = 'block';
+        if(modal) modal.style.display = 'block';
     }
 
     function closeModal(modal) {
-        modal.style.display = 'none';
+        if(modal) modal.style.display = 'none';
     }
 
     // Eventos para abrir/cerrar/cambiar modales
-    document.getElementById('show-login-modal').addEventListener('click', (e) => { e.preventDefault(); openModal(loginModal); });
+    showLoginBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(loginModal); });
     document.getElementById('show-register-modal').addEventListener('click', (e) => { e.preventDefault(); closeModal(loginModal); openModal(registerModal); });
     document.getElementById('switch-to-login-modal').addEventListener('click', (e) => { e.preventDefault(); closeModal(registerModal); openModal(loginModal); });
 
@@ -57,17 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Obtenemos los usuarios existentes o creamos un array vacío
         const users = JSON.parse(localStorage.getItem('f1_users')) || [];
-
-        // Comprobamos si el email ya existe
         if (users.some(user => user.email === email)) {
             alert('Este email ya está registrado.');
             return;
         }
 
-        // Añadimos el nuevo usuario
-        users.push({ name, email, password }); // En una app real, la contraseña debe ser encriptada
+        users.push({ name, email, password });
         localStorage.setItem('f1_users', JSON.stringify(users));
 
         alert('¡Registro completado! Por favor, inicia sesión.');
@@ -80,12 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const email = document.getElementById('login-email').value;
         const password = document.getElementById('login-password').value;
-
         const users = JSON.parse(localStorage.getItem('f1_users')) || [];
         const user = users.find(u => u.email === email && u.password === password);
 
         if (user) {
-            // Guardamos el usuario actual en Local Storage
             localStorage.setItem('f1_currentUser', JSON.stringify({ name: user.name, email: user.email }));
             alert(`¡Bienvenido de nuevo, ${user.name}!`);
             closeModal(loginModal);
@@ -104,6 +98,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // --- ESTADO INICIAL ---
-    // Al cargar la página, comprobar si hay un usuario logueado para mostrar el menú correcto
     updateUserUI();
-});
+}
