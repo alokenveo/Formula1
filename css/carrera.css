@@ -372,3 +372,64 @@
     width: 50%;
     margin: 0 auto;
 }
+
+
+/* ======== ESTILOS RESPONSIVE ======== */
+
+@media (max-width: 768px) {
+    .race-config-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .config-group {
+        width: 100%;
+    }
+
+    .config-group select {
+        width: 100%;
+    }
+
+    .race-display-area {
+        height: 350px;
+    }
+
+    .drivers-standings h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Ocultamos la columna de escudería para ganar espacio */
+    .standings-header,
+    .standings-item {
+        grid-template-columns: 0.5fr 3fr 1fr 1.5fr;
+    }
+
+    .standings-item .team-name {
+        display: none;
+    }
+    .standings-header span:nth-child(3) {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .race-display-area {
+        height: 280px;
+    }
+
+    .start-race-btn {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    .standings-header,
+    .standings-item {
+        font-size: 0.8rem;
+    }
+
+    .race-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

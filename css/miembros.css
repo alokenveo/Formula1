@@ -209,3 +209,21 @@ input:checked + .slider:before {
 .card-back-info span:last-child {
     color: white; /* Valores en blanco */
 }
+
+/* ======== ESTILOS RESPONSIVE ======== */
+
+@media (max-width: 480px) {
+    .cards-grid {
+        /* Ajustamos el tamaño mínimo de las tarjetas para que quepan dos por fila si es posible */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .card-name {
+        font-size: 1.1rem;
+    }
+
+    .flip-card {
+        height: 250px; /* Reducimos un poco la altura de la tarjeta */
+    }
+}

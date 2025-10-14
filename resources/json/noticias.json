@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "Verstappen se impone en una caótica carrera en Spa",
+        "date": "2025-07-28",
+        "category": "Carreras",
+        "image": "https://images.unsplash.com/photo-1631751103989-232189a07119?q=80&w=1887&auto=format&fit=crop",
+        "summary": "Una lluvia intermitente convirtió el Gran Premio de Bélgica en una prueba de supervivencia, donde la estrategia de Red Bull y el talento de Max Verstappen marcaron la diferencia.",
+        "tags": ["verstappen", "red bull", "spa-francorchamps", "lluvia", "carrera"]
+    },
+    {
+        "id": 2,
+        "title": "Ferrari confirma a Hamilton para la próxima temporada",
+        "date": "2025-02-01",
+        "category": "Pilotos",
+        "image": "https://images.unsplash.com/photo-1598440937395-50d4f3e69d76?q=80&w=1887&auto=format&fit=crop",
+        "summary": "En el movimiento más sonado del mercado, la Scuderia Ferrari ha anunciado oficialmente el fichaje de Lewis Hamilton, siete veces campeón del mundo.",
+        "tags": ["ferrari", "hamilton", "fichajes", "pilotos", "mercedes"]
+    },
+    {
+        "id": 3,
+        "title": "Análisis técnico: El nuevo suelo de McLaren da sus frutos",
+        "date": "2025-06-15",
+        "category": "Análisis",
+        "image": "https://images.unsplash.com/photo-1608244517548-f86a76d396a8?q=80&w=1887&auto=format&fit=crop",
+        "summary": "Las mejoras introducidas por McLaren en el último Gran Premio parecen haber solucionado sus problemas de degradación, posicionándolos como un rival a tener en cuenta.",
+        "tags": ["mclaren", "tecnica", "analisis", "desarrollo"]
+    },
+    {
+        "id": 4,
+        "title": "Alonso logra un podio inesperado en Mónaco",
+        "date": "2025-05-26",
+        "category": "Carreras",
+        "image": "https://images.unsplash.com/photo-1606144573881-af87a1772186?q=80&w=1964&auto=format&fit=crop",
+        "summary": "Con una clase magistral de pilotaje defensivo, Fernando Alonso consiguió mantener a raya a sus rivales para asegurar un valioso tercer puesto en las calles del principado.",
+        "tags": ["alonso", "aston martin", "monaco", "podio", "carrera"]
+    },
+    {
+        "id": 5,
+        "title": "Previa del GP de Silverstone: ¿Podrá alguien batir a Red Bull?",
+        "date": "2025-07-03",
+        "category": "Previas",
+        "image": "https://images.unsplash.com/photo-1629812484784-154b232e0350?q=80&w=1887&auto=format&fit=crop",
+        "summary": "Llegamos a la casa del automovilismo británico con la gran incógnita de si las mejoras de Mercedes y Ferrari serán suficientes para desafiar el dominio aplastante de Red Bull.",
+        "tags": ["silverstone", "previa", "red bull", "mercedes", "ferrari"]
+    }
+]

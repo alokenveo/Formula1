@@ -19,7 +19,9 @@ body {
     padding: 40px 20px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -35,30 +37,38 @@ h1, h2, h3 {
 
 /* --- PARTE SUPERIOR (Logo) --- */
 .header-top {
-    background-color: #38383F; /* Gris oscuro */
+    background-color: #38383F;
+    /* Gris oscuro */
     display: flex;
-    justify-content: center; /* Centra el logo horizontalmente */
+    justify-content: center;
+    /* Centra el logo horizontalmente */
     align-items: center;
     padding: 20px 0;
 }
 
 .f1-logo {
-    width: 130px; /* Tamaño del logo */
+    width: 130px;
+    /* Tamaño del logo */
     height: auto;
 }
 
 /* --- PARTE INFERIOR (Barra de Navegación) --- */
 .header-bottom {
-    background-color: #E10600; /* Rojo oficial de F1 */
+    background-color: #E10600;
+    /* Rojo oficial de F1 */
     padding: 10px 0;
 }
 
 .nav-container {
-    max-width: 1400px; /* Ancho máximo del contenido de la barra */
-    margin: 0 auto; /* Centra el contenedor */
-    padding: 0 20px; /* Espaciado en los lados */
+    max-width: 1400px;
+    /* Ancho máximo del contenido de la barra */
+    margin: 0 auto;
+    /* Centra el contenedor */
+    padding: 0 20px;
+    /* Espaciado en los lados */
     display: flex;
-    justify-content: space-between; /* Pone un grupo a la izq. y otro a la der. */
+    justify-content: space-between;
+    /* Pone un grupo a la izq. y otro a la der. */
     align-items: center;
 }
 
@@ -67,7 +77,8 @@ h1, h2, h3 {
     background: none;
     border: none;
     color: white;
-    font-size: 24px; /* Tamaño del icono */
+    font-size: 24px;
+    /* Tamaño del icono */
     cursor: pointer;
 }
 
@@ -75,15 +86,19 @@ h1, h2, h3 {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 25px; /* Espacio entre la lista de enlaces y el botón "User Profile" */
+    gap: 25px;
+    /* Espacio entre la lista de enlaces y el botón "User Profile" */
 }
 
 .nav-links {
-    list-style: none; /* Quita los puntos de la lista */
+    list-style: none;
+    /* Quita los puntos de la lista */
     margin: 0;
     padding: 0;
-    display: flex; /* Pone los elementos de la lista en horizontal */
-    gap: 20px; /* Espacio entre cada enlace */
+    display: flex;
+    /* Pone los elementos de la lista en horizontal */
+    gap: 20px;
+    /* Espacio entre cada enlace */
 }
 
 .nav-links a {
@@ -92,17 +107,20 @@ h1, h2, h3 {
     font-size: 14px;
     font-weight: bold;
     padding-bottom: 5px;
-    border-bottom: 2px solid transparent; /* Borde inferior para el efecto hover */
+    border-bottom: 2px solid transparent;
+    /* Borde inferior para el efecto hover */
     transition: border-color 0.3s;
 }
 
 .nav-links a:hover {
-    border-bottom-color: white; /* Muestra el borde al pasar el ratón */
+    border-bottom-color: white;
+    /* Muestra el borde al pasar el ratón */
 }
 
 /* ======== PERFIL DE USUARIO Y DROPDOWN ======== */
 .user-profile {
-    position: relative; /* Clave para posicionar el dropdown */
+    position: relative;
+    /* Clave para posicionar el dropdown */
     display: inline-block;
 }
 
@@ -119,13 +137,14 @@ h1, h2, h3 {
 }
 
 .dropdown-menu {
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
     position: absolute;
     right: 0;
     top: 100%;
     background-color: white;
     min-width: 180px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 100;
     border-radius: 8px;
     padding: 5px 0;
@@ -158,7 +177,7 @@ h1, h2, h3 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .auth-modal .modal-content {
@@ -205,7 +224,8 @@ h1, h2, h3 {
     border: 1px solid #666;
     border-radius: 5px;
     color: white;
-    box-sizing: border-box; /* Importante para que el padding no afecte el ancho */
+    box-sizing: border-box;
+    /* Importante para que el padding no afecte el ancho */
 }
 
 .submit-btn {
@@ -239,22 +259,71 @@ h1, h2, h3 {
 
 
 /* ======== CABECERA (HERO SECTION) ======== */
+/* ======== SECCIÓN HERO (CON SLIDER) ======== */
 .hero {
-    height: 70vh;
-    background-image: url('https://i.imgur.com/K3v8IvG.png'); /* He subido tu imagen a un servidor para usarla */
-    background-size: cover;
-    background-position: center;
+    height: 90vh;
+    /* O la altura que prefieras */
+    position: relative;
+    /* Clave para posicionar los elementos internos */
+    overflow: hidden;
+    /* Oculta cualquier parte de los slides que se salga */
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Detrás del contenido */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* Oculto por defecto */
+    transition: opacity 1.5s ease-in-out;
+    /* Animación de fundido suave */
+}
+
+/* El slide activo será visible */
+.slide.active-slide {
+    opacity: 1;
+}
+
+/* Estilo para que imágenes y videos cubran todo el contenedor */
+.slide img,
+.slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Recorta y escala para cubrir el espacio sin deformar */
+}
+
+/* El contenido (título) se posiciona por encima del slider */
+.hero-content {
+    position: relative;
+    /* Cambiado para que funcione con z-index */
+    z-index: 2;
+    /* Por encima del slider */
+    height: 100%;
     display: flex;
-    align-items: flex-start; /* Alinea el texto arriba */
-    padding-top: 40px; /* Espacio superior para el título */
+    align-items: flex-start;
+    padding-top: 60px;
+    /* Espacio superior para el título */
+    justify-content: flex-start;
 }
 
 .hero-content h1 {
-    font-size: 5rem;
     color: var(--color-blanco);
-    text-align: left;
-    margin-left: 5%; /* Margen para que no esté pegado al borde */
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    font-size: 5rem;
+    margin-left: 5%;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* ======== SECCIÓN HISTORIA ======== */
@@ -269,19 +338,12 @@ h1, h2, h3 {
     align-items: center;
 }
 
-.historia-img-placeholder {
+.historia-img-placeholder img {
     width: 100%;
     height: 250px;
-    background-color: #f0f0f0;
-    border: 2px dashed #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
-    color: #ccc;
-}
-.historia-img-placeholder::after {
-    content: '🖼️'; /* Emoji de imagen como placeholder */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
 }
 
 
@@ -320,18 +382,22 @@ h1, h2, h3 {
 
 /* ======== SECCIÓN NORMATIVAS (ESTILO ACORDEÓN) ======== */
 .normativas {
-    background-color: #E10600; /* Usando un rojo F1 */
+    background-color: #E10600;
+    /* Usando un rojo F1 */
     color: white;
-    padding: 60px 0; /* Más espacio vertical */
+    padding: 60px 0;
+    /* Más espacio vertical */
 }
 
 /* El h2 sigue igual pero lo ajustamos un poco */
 .normativas h2 {
-    font-family: 'Anton', sans-serif; /* Asegúrate de tener esta fuente o una similar */
+    font-family: 'Anton', sans-serif;
+    /* Asegúrate de tener esta fuente o una similar */
     font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 30px;
-    color: black; /* El título está en negro en tu imagen */
+    color: black;
+    /* El título está en negro en tu imagen */
 }
 
 .accordion-item {
@@ -349,14 +415,18 @@ h1, h2, h3 {
     outline: none;
     font-size: 16px;
     transition: background-color 0.4s ease;
-    border-radius: 8px; /* Bordes redondeados */
-    display: flex; /* Para alinear el texto y la flecha */
-    justify-content: space-between; /* Empuja el texto a la izq. y la flecha a la der. */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    display: flex;
+    /* Para alinear el texto y la flecha */
+    justify-content: space-between;
+    /* Empuja el texto a la izq. y la flecha a la der. */
     align-items: center;
 }
 
 .accordion-header:hover {
-    background-color: #333; /* Un poco más claro al pasar el ratón */
+    background-color: #333;
+    /* Un poco más claro al pasar el ratón */
 }
 
 /* Estilo para la flecha */
@@ -365,7 +435,8 @@ h1, h2, h3 {
     height: 10px;
     border-right: 2px solid white;
     border-bottom: 2px solid white;
-    transform: rotate(45deg); /* Flecha apuntando hacia abajo */
+    transform: rotate(45deg);
+    /* Flecha apuntando hacia abajo */
     transition: transform 0.3s ease;
 }
 
@@ -375,18 +446,25 @@ h1, h2, h3 {
 }
 
 .accordion-content {
-    padding: 0 18px; /* Mismo padding que el header para alinear el texto */
-    background-color: #f1f1f1; /* Un fondo gris claro para el contenido */
-    color: #333; /* Texto oscuro para que se lea bien */
-    max-height: 0; /* Clave: oculto por defecto */
-    overflow: hidden; /* Clave: oculta el contenido que se desborda */
-    transition: max-height 0.3s ease-out; /* Animación suave */
+    padding: 0 18px;
+    /* Mismo padding que el header para alinear el texto */
+    background-color: #f1f1f1;
+    /* Un fondo gris claro para el contenido */
+    color: #333;
+    /* Texto oscuro para que se lea bien */
+    max-height: 0;
+    /* Clave: oculto por defecto */
+    overflow: hidden;
+    /* Clave: oculta el contenido que se desborda */
+    transition: max-height 0.3s ease-out;
+    /* Animación suave */
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
 .accordion-content p {
-    padding: 15px 0; /* Espacio interno para que el texto no se pegue a los bordes */
+    padding: 15px 0;
+    /* Espacio interno para que el texto no se pegue a los bordes */
 }
 
 
@@ -411,18 +489,42 @@ h1, h2, h3 {
 }
 
 /* Footer: Branding y Redes */
-.f1-logo-footer {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'Anton', sans-serif;
-    margin: 0 0 15px 0;
+.f1-logo-footer-img {
+    width: 100px;
+    /* Ajusta el tamaño del logo como prefieras */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    /* Espacio entre los iconos */
 }
 
 .social-icons a {
     color: var(--color-blanco);
+    /* Mantenemos el color por si acaso */
     text-decoration: none;
-    font-size: 1.5rem;
-    margin-right: 10px;
+    display: inline-block;
+    /* Importante para dar tamaño */
+    width: 28px;
+    /* Tamaño del contenedor del icono */
+    height: 28px;
+}
+
+.social-icons a svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    /* El SVG usará el color del enlace (<a>) */
+    transition: color 0.3s ease;
+    /* Transición suave del color */
+}
+
+.social-icons a:hover {
+    color: var(--color-rojo-f1);
+    /* Al pasar el ratón, cambia el color del enlace y por tanto del SVG */
 }
 
 /* Footer: Formulario */
@@ -480,4 +582,97 @@ h1, h2, h3 {
     width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+/* ======== ESTILOS RESPONSIVE Y MENÚ DE HAMBURGUESA ======== */
+
+/* --- Estilos base para el botón de hamburguesa (oculto en escritorio) --- */
+.hamburger-menu {
+    display: none;
+    /* Oculto por defecto en pantallas grandes */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    /* Para que esté por encima de otros elementos */
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Media Query para tablets y móviles --- */
+@media (max-width: 768px) {
+
+    /* --- Header y Navegación --- */
+    .hamburger-menu {
+        display: flex;
+        /* Mostramos el botón de hamburguesa */
+    }
+
+    .nav-right .nav-links {
+        display: none;
+        /* Ocultamos el menú de navegación normal */
+        flex-direction: column;
+        position: absolute;
+        top: 130px;
+        /* Ajusta esta altura según la de tu header */
+        right: 0;
+        width: 100%;
+        background-color: #1e1e1e;
+        /* Un fondo oscuro para el menú desplegado */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    /* Estilo para cuando el menú está activo (visible) */
+    .nav-right .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        padding: 15px;
+        display: block;
+        width: 100%;
+    }
+
+    /* --- Footer --- */
+    /* Hacemos que las columnas del footer se apilen verticalmente */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        /* Una sola columna */
+        text-align: center;
+    }
+
+    .footer-contact form {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    /* --- Otros ajustes generales para móviles --- */
+    .hero-content h1 {
+        font-size: 3rem;
+        /* Título principal más pequeño */
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        /* Apilar la sección de historia */
+    }
 }

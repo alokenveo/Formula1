@@ -154,3 +154,42 @@ main {
     margin-top: 20px;
     border-radius: 8px;
 }
+
+
+/* ======== ESTILOS RESPONSIVE ======== */
+
+@media (max-width: 768px) {
+    .calendar-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .day {
+        min-height: 100px;
+        font-size: 0.9rem;
+    }
+
+    .gp-info {
+        font-size: 0.7rem;
+    }
+
+    .weekdays {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .weekdays {
+        font-size: 0.7rem;
+        font-weight: normal;
+    }
+
+    .day {
+        min-height: 80px;
+        padding: 4px;
+    }
+
+    .day-number {
+        font-size: 0.8rem;
+    }
+}

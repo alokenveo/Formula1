@@ -437,3 +437,37 @@
     margin: 0 auto 20px auto;
     color: #28a745; /* Verde de éxito */
 }
+
+/* ======== ESTILOS RESPONSIVE ======== */
+
+@media (max-width: 992px) {
+    .shop-filters-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .price-range input[type="range"],
+    #product-type {
+        width: 100%;
+    }
+
+    .cart-icon-container {
+        align-self: flex-end; /* Mueve el icono del carrito a la derecha */
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr; /* Una sola columna para los productos */
+    }
+
+    .cart-modal .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+}
