@@ -7,7 +7,7 @@
             "teamId": "ferrari",
             "number": 44,
             "skill": 9.5,
-            "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LEWHAM00/lewham00.png.transform/2col/image.png",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWbZZB6yYFnIfYae3Umq3a3HZm6g4DTVBnqQ&s",
             "backInfo": {
                 "championships": 7,
                 "wins": 103,
@@ -22,7 +22,7 @@
             "teamId": "ferrari",
             "number": 16,
             "skill": 8.8,
-            "image": "https://media.formula1.com/content/dam/fom-website/drivers/C/CHALEC00/chalec00.png.transform/2col/image.png",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtDvpV0K_dQMrP_bBnwGxwl7xtFPMn-MlJRg&s",
             "backInfo": {
                 "championships": 0,
                 "wins": 5,
@@ -37,7 +37,7 @@
             "teamId": "mclaren",
             "number": 4,
             "skill": 9.0,
-            "image": "https://media.formula1.com/content/dam/fom-website/drivers/L/LANNOR00/lannor00.png.transform/2col/image.png",
+            "image": "https://cdn.antaranews.com/cache/1200x800/2025/03/15/GmD03DbWAAAKHHr.jpg",
             "backInfo": {
                 "championships": 0,
                 "wins": 1,
@@ -309,7 +309,7 @@
             "color": "#dc0000",
             "teamPrincipal": "Frédéric Vasseur",
             "carPerformance": 9.2,
-            "image": "https://media.formula1.com/content/dam/fom-website/teams/Ferrari/ferrari-logo.png.transform/2col/image.png",
+            "image": "https://assets.thegpbox.com/2022/05/flag-scuderia-ferrari-pole-140x100cm-1-300x300.jpg",
             "backInfo": {
                 "championships": 16,
                 "wins": 243,
@@ -324,7 +324,7 @@
             "color": "#ff8700",
             "teamPrincipal": "Andrea Stella",
             "carPerformance": 9.5,
-            "image": "https://media.formula1.com/content/dam/fom-website/teams/McLaren/mclaren-logo.png.transform/2col/image.png",
+            "image": "https://media.licdn.com/dms/image/v2/C4E03AQEPH_Wk2Itkhw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1655840692675?e=2147483647&v=beta&t=Lna9Nupm8yXEuH_aJcQ-mEZvMazeA6jvw94A9HbEsL4",
             "backInfo": {
                 "championships": 8,
                 "wins": 183,
@@ -339,7 +339,7 @@
             "color": "#0600ef",
             "teamPrincipal": "Christian Horner",
             "carPerformance": 9.8,
-            "image": "https://media.formula1.com/content/dam/fom-website/teams/Red%20Bull/red-bull-logo.png.transform/2col/image.png",
+            "image": "https://www.shutterstock.com/image-photo/braga-portugal-june-12-2025-260nw-2640349983.jpg",
             "backInfo": {
                 "championships": 6,
                 "wins": 120,

@@ -59,12 +59,12 @@
     padding: 20px 10px 10px 10px;
     font-size: 0.9rem;
     font-weight: bold;
-    opacity: 0; /* Oculto por defecto */
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .gallery-item:hover .gallery-caption {
-    opacity: 1; /* Aparece al pasar el ratón */
+    opacity: 1;
 }
 
 
@@ -72,13 +72,13 @@
 /* Para tablets */
 @media (max-width: 768px) {
     .masonry-layout {
-        column-count: 2; /* 2 columnas */
+        column-count: 2;
     }
 }
 
 /* Para móviles */
 @media (max-width: 480px) {
     .masonry-layout {
-        column-count: 1; /* 1 columna */
+        column-count: 1;
     }
 }

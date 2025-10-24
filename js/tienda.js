@@ -163,9 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="product-price">${product.price.toFixed(2)}€</p>
                     <button class="add-to-cart-btn" data-product-id="${product.id}">
                         Añadir al carrito
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18">
-                            <path d="M0 24..."/>
-                        </svg>
+                        <i class="fa-solid fa-cart-shopping"></i>
                     </button>
                 </div>
             `;

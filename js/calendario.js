@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- INICIALIZACIÓN ---
     async function init() {
-        // Cargar datos de las carreras desde el JSON
         try {
             const response = await fetch('/resources/json/calendario.json');
             raceData = await response.json();
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("No se pudo cargar el calendario de carreras:", error);
         }
 
-        // Llenar el selector de años (ej. 2020 a 2030)
         const currentYear = new Date().getFullYear();
         for (let i = currentYear - 5; i <= currentYear + 5; i++) {
             const option = document.createElement('option');
